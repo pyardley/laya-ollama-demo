@@ -1,10 +1,31 @@
+import time
+
+# Start the clock before the heavy imports: importing torch/transformers is a real cost.
+_script_start = time.perf_counter()
+timings = {}  # phase name -> seconds, in the order the phases ran
+
+
+class timed:
+    """Context manager that records how long a block took under `timings[name]`."""
+
+    def __init__(self, name):
+        self.name = name
+
+    def __enter__(self):
+        self.start = time.perf_counter()
+
+    def __exit__(self, *exc):
+        timings[self.name] = timings.get(self.name, 0) + time.perf_counter() - self.start
+
+
 import os
 import sys
 
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 
-from laya import load
-from langchain_ollama import OllamaLLM
+with timed("Import libraries (torch, transformers, langchain)"):
+    from laya import load
+    from langchain_ollama import OllamaLLM
 
 # Decisions below this calibrated confidence are sent to a human, whatever Laya chose.
 CONFIDENCE_THRESHOLD = 0.70
@@ -18,7 +39,9 @@ Customer Support Team"""
 
 # 1. Load Models
 print("Loading models...")
-agent = load("convaiinnovations/laya", device="cpu")
+with timed("Load Laya model (download check + weights)"):
+    agent = load("convaiinnovations/laya", device="cpu")
+# Only creates a client - Ollama loads llama3.1 into memory on the first call.
 ollama_llm = OllamaLLM(model="llama3.1:8b")
 
 # Pass a ticket on the command line to try other routes, e.g.
@@ -26,20 +49,21 @@ ollama_llm = OllamaLLM(model="llama3.1:8b")
 ticket = sys.argv[1] if len(sys.argv) > 1 else "My speaker crackles when playing audio."
 
 # 2. Perform Decision Pass
-decision = agent.predict(
-    state=ticket,
-    questions={
-        "action": {
-            "instructions": "What action should be taken for this customer support ticket?",
-            "type": "choice",
-            "criteria": {
-                "auto_reply": "The issue is simple and can be addressed automatically.",
-                "escalate_to_human": "The hardware issue or replacement request needs a human agent.",
-                "ignore": "The message is spam or completely irrelevant."
+with timed("Laya decision (predict)"):
+    decision = agent.predict(
+        state=ticket,
+        questions={
+            "action": {
+                "instructions": "What action should be taken for this customer support ticket?",
+                "type": "choice",
+                "criteria": {
+                    "auto_reply": "The issue is simple and can be addressed automatically.",
+                    "escalate_to_human": "The hardware issue or replacement request needs a human agent.",
+                    "ignore": "The message is spam or completely irrelevant."
+                }
             }
         }
-    }
-)
+    )
 
 # 3. Extract Results
 action_data = decision["answers"]["action"]
@@ -81,6 +105,27 @@ def print_block(title, text):
     print("-" * 60)
 
 
+def ask_ollama(prompt):
+    """invoke() equivalent that also records Ollama's own timing breakdown.
+
+    Ollama reports durations in nanoseconds. The first call of a run includes loading
+    llama3.1 into memory ("load"), which can dwarf the actual generation time.
+    """
+    with timed("Ollama call (wall clock)"):
+        result = ollama_llm.generate([prompt])
+    generation = result.generations[0][0]
+    info = generation.generation_info or {}
+    for key, label in [("load_duration", "  of which: Ollama model load"),
+                       ("prompt_eval_duration", "  of which: Ollama prompt processing"),
+                       ("eval_duration", "  of which: Ollama text generation")]:
+        if info.get(key):
+            timings[label] = timings.get(label, 0) + info[key] / 1e9
+    if info.get("eval_count") and info.get("eval_duration"):
+        print(f"[Ollama generated {info['eval_count']} tokens at "
+              f"{info['eval_count'] / (info['eval_duration'] / 1e9):.1f} tokens/s]\n")
+    return generation.text
+
+
 def draft_handoff_note(context):
     prompt = (
         f"You are helping triage a customer support ticket for a human agent. The ticket says: '{ticket}'.\n"
@@ -93,7 +138,7 @@ def draft_handoff_note(context):
         "Suggested next step:\n"
         "Output only the note, with no preamble."
     )
-    print_block("OLLAMA HANDOFF NOTE (internal, for the agent)", ollama_llm.invoke(prompt))
+    print_block("OLLAMA HANDOFF NOTE (internal, for the agent)", ask_ollama(prompt))
 
 
 # 5. Route Execution
@@ -115,7 +160,7 @@ elif chosen_action == "auto_reply":
         "Do not use placeholders such as [Customer's Name]; open with 'Hello,' and sign off "
         "as 'Customer Support Team'."
     )
-    print_block("OLLAMA AUTO-REPLY (ready to send)", ollama_llm.invoke(prompt))
+    print_block("OLLAMA AUTO-REPLY (ready to send)", ask_ollama(prompt))
 
 elif chosen_action == "escalate_to_human":
     print("Action triggered: Escalating to a human agent.\n")
@@ -128,5 +173,16 @@ elif chosen_action == "escalate_to_human":
 
 else:
     print("Action evaluated as 'ignore'. No response generated.")
+
+# 6. Timing Summary
+total = time.perf_counter() - _script_start
+print("\n" + "=" * 60)
+print(" ⏱️ TIMING")
+print("=" * 60)
+for name, seconds in timings.items():
+    print(f"  {name:<50} {seconds:7.2f}s")
+accounted = sum(s for n, s in timings.items() if not n.startswith("  of which"))
+print(f"  {'Everything else (printing, small imports)':<50} {total - accounted:7.2f}s")
+print(f"  {'TOTAL':<50} {total:7.2f}s")
 
 print("\n" + "=" * 60 + "\n")
