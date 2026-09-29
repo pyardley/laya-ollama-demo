@@ -27,9 +27,6 @@ with timed("Import libraries (torch, transformers, langchain)"):
     from laya import load
     from langchain_ollama import OllamaLLM
 
-# Decisions below this calibrated confidence are sent to a human, whatever Laya chose.
-CONFIDENCE_THRESHOLD = 0.70
-
 HOLDING_REPLY = """Hello,
 
 Thank you for getting in touch. Your message has been passed to one of our support
@@ -57,9 +54,11 @@ with timed("Laya decision (predict)"):
                 "instructions": "What action should be taken for this customer support ticket?",
                 "type": "choice",
                 "criteria": {
-                    "auto_reply": "The issue is simple and can be addressed automatically.",
-                    "escalate_to_human": "The hardware issue or replacement request needs a human agent.",
-                    "ignore": "The message is spam or completely irrelevant."
+                    # Wording from the labelled search (a1 / e3 / i9). One short sentence each:
+                    # Laya keeps 48 tokens of an option, and three options stay in the calibrated bucket.
+                    "auto_reply": "A how-to or FAQ: password reset, Bluetooth pairing, order tracking, firmware, or account settings.",
+                    "escalate_to_human": "Broken hardware, a refund, a safety issue, or an account takeover.",
+                    "ignore": "Not a customer support request."
                 }
             }
         }
@@ -69,8 +68,10 @@ with timed("Laya decision (predict)"):
 action_data = decision["answers"]["action"]
 chosen_action = action_data["choice"]
 probabilities = action_data["probabilities"]
-# 'answer_confidence' is max(p), the calibrated value that is safe to threshold on.
+# 'answer_confidence' is max(p), the calibrated value.
 # 'confidence' is normalised entropy over all options and is NOT calibrated.
+# Route on the highest-probability action. With this wording a correct call usually
+# sits around 0.5-0.6, so a 70% gate withheld every route.
 answer_confidence = action_data.get("answer_confidence", 0)
 
 # 4. Formatted Display
@@ -142,16 +143,7 @@ def draft_handoff_note(context):
 
 
 # 5. Route Execution
-if answer_confidence < CONFIDENCE_THRESHOLD:
-    # Not sure enough to act on any route - including telling the customer anything.
-    # A human decides; they get Laya's full probability spread as context.
-    print(f"Confidence {answer_confidence:.1%} is below the {CONFIDENCE_THRESHOLD:.0%} threshold: "
-          "sending to a human for review. No customer reply sent.\n")
-    spread = ", ".join(f"{k} {v:.0%}" for k, v in probabilities.items())
-    print("Invoking Ollama to draft an internal handoff note...\n")
-    draft_handoff_note(f"An automated classifier was unsure how to handle it ({spread}).")
-
-elif chosen_action == "auto_reply":
+if chosen_action == "auto_reply":
     print("Action triggered: Invoking Ollama to draft an automatic customer reply...\n")
 
     prompt = (

@@ -1,0 +1,3571 @@
+{
+  "objective": "Mean credited answer_confidence: answer_confidence when the chosen action matches the labeled action, otherwise 0.",
+  "confidence_threshold": 0.7,
+  "strategy": "coordinate",
+  "finished": true,
+  "model_seconds": 1295.761,
+  "n_evaluated": 64,
+  "n_messages": 50,
+  "best": {
+    "ids": {
+      "auto_reply": "a1",
+      "escalate_to_human": "e3",
+      "ignore": "i9"
+    },
+    "baseline": false,
+    "mean_credited_confidence": 0.437872,
+    "accuracy": 0.82,
+    "n_correct": 41,
+    "mean_p_correct": 0.49400599999999995,
+    "macro_credited_confidence": 0.4373253676470588,
+    "n_correct_above_threshold": 1,
+    "by_label": {
+      "auto_reply": {
+        "n": 17,
+        "n_correct": 14,
+        "mean_credited_confidence": 0.42411176470588235
+      },
+      "escalate_to_human": {
+        "n": 17,
+        "n_correct": 14,
+        "mean_credited_confidence": 0.47787058823529405
+      },
+      "ignore": {
+        "n": 16,
+        "n_correct": 13,
+        "mean_credited_confidence": 0.40999375
+      }
+    },
+    "texts": {
+      "auto_reply": "A how-to or FAQ: password reset, Bluetooth pairing, order tracking, firmware, or account settings.",
+      "escalate_to_human": "Broken hardware, a refund, a safety issue, or an account takeover.",
+      "ignore": "Not a customer support request."
+    },
+    "messages": [
+      {
+        "id": "m01",
+        "label": "auto_reply",
+        "choice": "auto_reply",
+        "correct": true,
+        "answer_confidence": 0.5814,
+        "credited_confidence": 0.5814,
+        "p_correct": 0.5814,
+        "probabilities": {
+          "auto_reply": 0.5814,
+          "escalate_to_human": 0.24,
+          "ignore": 0.1786
+        },
+        "text": "How do I reset my password? I can't remember it."
+      },
+      {
+        "id": "m02",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.476,
+        "credited_confidence": 0.0,
+        "p_correct": 0.277,
+        "probabilities": {
+          "auto_reply": 0.277,
+          "escalate_to_human": 0.476,
+          "ignore": 0.247
+        },
+        "text": "This is ridiculous, where is the tracking number on the website? I can't find the page."
+      },
+      {
+        "id": "m03",
+        "label": "auto_reply",
+        "choice": "auto_reply",
+        "correct": true,
+        "answer_confidence": 0.6295,
+        "credited_confidence": 0.6295,
+        "p_correct": 0.6295,
+        "probabilities": {
+          "auto_reply": 0.6295,
+          "escalate_to_human": 0.2081,
+          "ignore": 0.1624
+        },
+        "text": "How do I pair the speaker with my phone over Bluetooth?"
+      },
+      {
+        "id": "m04",
+        "label": "auto_reply",
+        "choice": "auto_reply",
+        "correct": true,
+        "answer_confidence": 0.451,
+        "credited_confidence": 0.451,
+        "p_correct": 0.451,
+        "probabilities": {
+          "auto_reply": 0.451,
+          "escalate_to_human": 0.2343,
+          "ignore": 0.3147
+        },
+        "text": "Can you tell me how to change the email address on my account?"
+      },
+      {
+        "id": "m05",
+        "label": "auto_reply",
+        "choice": "ignore",
+        "correct": false,
+        "answer_confidence": 0.578,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2386,
+        "probabilities": {
+          "auto_reply": 0.2386,
+          "escalate_to_human": 0.1834,
+          "ignore": 0.578
+        },
+        "text": "What is your returns window? I'm not sending anything back, I just want the policy."
+      },
+      {
+        "id": "m06",
+        "label": "auto_reply",
+        "choice": "auto_reply",
+        "correct": true,
+        "answer_confidence": 0.4927,
+        "credited_confidence": 0.4927,
+        "p_correct": 0.4927,
+        "probabilities": {
+          "auto_reply": 0.4927,
+          "escalate_to_human": 0.316,
+          "ignore": 0.1913
+        },
+        "text": "How do I update the firmware on the SoundBar 200?"
+      },
+      {
+        "id": "m07",
+        "label": "auto_reply",
+        "choice": "auto_reply",
+        "correct": true,
+        "answer_confidence": 0.54,
+        "credited_confidence": 0.54,
+        "p_correct": 0.54,
+        "probabilities": {
+          "auto_reply": 0.54,
+          "escalate_to_human": 0.281,
+          "ignore": 0.179
+        },
+        "text": "How do I turn off marketing emails?"
+      },
+      {
+        "id": "m08",
+        "label": "auto_reply",
+        "choice": "auto_reply",
+        "correct": true,
+        "answer_confidence": 0.3678,
+        "credited_confidence": 0.3678,
+        "p_correct": 0.3678,
+        "probabilities": {
+          "auto_reply": 0.3678,
+          "escalate_to_human": 0.2775,
+          "ignore": 0.3547
+        },
+        "text": "Does the standard warranty cover accidental drops, or only manufacturing faults? I only want what the policy says."
+      },
+      {
+        "id": "m09",
+        "label": "auto_reply",
+        "choice": "auto_reply",
+        "correct": true,
+        "answer_confidence": 0.4463,
+        "credited_confidence": 0.4463,
+        "p_correct": 0.4463,
+        "probabilities": {
+          "auto_reply": 0.4463,
+          "escalate_to_human": 0.2369,
+          "ignore": 0.3168
+        },
+        "text": "Where do I download the iOS app?"
+      },
+      {
+        "id": "m10",
+        "label": "auto_reply",
+        "choice": "auto_reply",
+        "correct": true,
+        "answer_confidence": 0.5555,
+        "credited_confidence": 0.5555,
+        "p_correct": 0.5555,
+        "probabilities": {
+          "auto_reply": 0.5555,
+          "escalate_to_human": 0.2724,
+          "ignore": 0.1721
+        },
+        "text": "How do I turn off the volume limit in the app? Playback is quieter than I expected."
+      },
+      {
+        "id": "m11",
+        "label": "auto_reply",
+        "choice": "auto_reply",
+        "correct": true,
+        "answer_confidence": 0.5575,
+        "credited_confidence": 0.5575,
+        "p_correct": 0.5575,
+        "probabilities": {
+          "auto_reply": 0.5575,
+          "escalate_to_human": 0.2541,
+          "ignore": 0.1883
+        },
+        "text": "How do I add a second user to my household account?"
+      },
+      {
+        "id": "m12",
+        "label": "auto_reply",
+        "choice": "auto_reply",
+        "correct": true,
+        "answer_confidence": 0.4564,
+        "credited_confidence": 0.4564,
+        "p_correct": 0.4564,
+        "probabilities": {
+          "auto_reply": 0.4564,
+          "escalate_to_human": 0.2513,
+          "ignore": 0.2923
+        },
+        "text": "Which payment methods can I use at checkout?"
+      },
+      {
+        "id": "m13",
+        "label": "auto_reply",
+        "choice": "auto_reply",
+        "correct": true,
+        "answer_confidence": 0.4664,
+        "credited_confidence": 0.4664,
+        "p_correct": 0.4664,
+        "probabilities": {
+          "auto_reply": 0.4664,
+          "escalate_to_human": 0.2841,
+          "ignore": 0.2495
+        },
+        "text": "Where is the user manual PDF for the Mini Speaker?"
+      },
+      {
+        "id": "m14",
+        "label": "auto_reply",
+        "choice": "auto_reply",
+        "correct": true,
+        "answer_confidence": 0.633,
+        "credited_confidence": 0.633,
+        "p_correct": 0.633,
+        "probabilities": {
+          "auto_reply": 0.633,
+          "escalate_to_human": 0.2264,
+          "ignore": 0.1406
+        },
+        "text": "How do I see my past orders once I'm logged in?"
+      },
+      {
+        "id": "m15",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.4221,
+        "credited_confidence": 0.0,
+        "p_correct": 0.3514,
+        "probabilities": {
+          "auto_reply": 0.3514,
+          "escalate_to_human": 0.4221,
+          "ignore": 0.2265
+        },
+        "text": "What hours is customer support open?"
+      },
+      {
+        "id": "m16",
+        "label": "auto_reply",
+        "choice": "auto_reply",
+        "correct": true,
+        "answer_confidence": 0.5575,
+        "credited_confidence": 0.5575,
+        "p_correct": 0.5575,
+        "probabilities": {
+          "auto_reply": 0.5575,
+          "escalate_to_human": 0.2801,
+          "ignore": 0.1624
+        },
+        "text": "How do I switch the speaker from Bluetooth to the aux input?"
+      },
+      {
+        "id": "m17",
+        "label": "auto_reply",
+        "choice": "auto_reply",
+        "correct": true,
+        "answer_confidence": 0.4749,
+        "credited_confidence": 0.4749,
+        "p_correct": 0.4749,
+        "probabilities": {
+          "auto_reply": 0.4749,
+          "escalate_to_human": 0.3402,
+          "ignore": 0.185
+        },
+        "text": "How do I rename my speaker in the app?"
+      },
+      {
+        "id": "m18",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.5118,
+        "credited_confidence": 0.5118,
+        "p_correct": 0.5118,
+        "probabilities": {
+          "auto_reply": 0.2362,
+          "escalate_to_human": 0.5118,
+          "ignore": 0.252
+        },
+        "text": "My speaker crackles when playing audio."
+      },
+      {
+        "id": "m19",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.5468,
+        "credited_confidence": 0.5468,
+        "p_correct": 0.5468,
+        "probabilities": {
+          "auto_reply": 0.2609,
+          "escalate_to_human": 0.5468,
+          "ignore": 0.1924
+        },
+        "text": "The left earcup on my headphones stopped working after two weeks. I need a replacement."
+      },
+      {
+        "id": "m20",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.5754,
+        "credited_confidence": 0.5754,
+        "p_correct": 0.5754,
+        "probabilities": {
+          "auto_reply": 0.2193,
+          "escalate_to_human": 0.5754,
+          "ignore": 0.2053
+        },
+        "text": "I was charged twice for order 44921. Please refund the duplicate payment."
+      },
+      {
+        "id": "m21",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.6028,
+        "credited_confidence": 0.6028,
+        "p_correct": 0.6028,
+        "probabilities": {
+          "auto_reply": 0.1826,
+          "escalate_to_human": 0.6028,
+          "ignore": 0.2146
+        },
+        "text": "The package arrived crushed and the speaker grille is dented."
+      },
+      {
+        "id": "m22",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.6544,
+        "credited_confidence": 0.6544,
+        "p_correct": 0.6544,
+        "probabilities": {
+          "auto_reply": 0.1609,
+          "escalate_to_human": 0.6544,
+          "ignore": 0.1847
+        },
+        "text": "This unit gets hot and smells like burning plastic. I unplugged it. Please advise urgently."
+      },
+      {
+        "id": "m23",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.4852,
+        "credited_confidence": 0.4852,
+        "p_correct": 0.4852,
+        "probabilities": {
+          "auto_reply": 0.2559,
+          "escalate_to_human": 0.4852,
+          "ignore": 0.2589
+        },
+        "text": "I want to return this speaker. It cuts out every few minutes and the steps on your help page did not fix it."
+      },
+      {
+        "id": "m24",
+        "label": "escalate_to_human",
+        "choice": "ignore",
+        "correct": false,
+        "answer_confidence": 0.508,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2854,
+        "probabilities": {
+          "auto_reply": 0.2066,
+          "escalate_to_human": 0.2854,
+          "ignore": 0.508
+        },
+        "text": "Someone changed my password and placed an order I didn't make. Please lock the account."
+      },
+      {
+        "id": "m25",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.5113,
+        "credited_confidence": 0.5113,
+        "p_correct": 0.5113,
+        "probabilities": {
+          "auto_reply": 0.2483,
+          "escalate_to_human": 0.5113,
+          "ignore": 0.2404
+        },
+        "text": "I've emailed three times about a missing delivery and nobody has replied. This is unacceptable."
+      },
+      {
+        "id": "m26",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.8525,
+        "credited_confidence": 0.8525,
+        "p_correct": 0.8525,
+        "probabilities": {
+          "auto_reply": 0.0665,
+          "escalate_to_human": 0.8525,
+          "ignore": 0.0809
+        },
+        "text": "Your driver left the parcel in the rain and the box is soaked through. I need a person to sort this out today."
+      },
+      {
+        "id": "m27",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.4735,
+        "credited_confidence": 0.4735,
+        "p_correct": 0.4735,
+        "probabilities": {
+          "auto_reply": 0.2841,
+          "escalate_to_human": 0.4735,
+          "ignore": 0.2424
+        },
+        "text": "The invoice total is higher than the price I saw at checkout. I need the charge corrected."
+      },
+      {
+        "id": "m28",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.5782,
+        "credited_confidence": 0.5782,
+        "p_correct": 0.5782,
+        "probabilities": {
+          "auto_reply": 0.2336,
+          "escalate_to_human": 0.5782,
+          "ignore": 0.1882
+        },
+        "text": "I am writing on behalf of a customer who was injured when a wall-mount bracket failed. We need to discuss liability."
+      },
+      {
+        "id": "m29",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.6359,
+        "credited_confidence": 0.6359,
+        "p_correct": 0.6359,
+        "probabilities": {
+          "auto_reply": 0.1663,
+          "escalate_to_human": 0.6359,
+          "ignore": 0.1979
+        },
+        "text": "The speaker will not power on at all, even with a different cable. I want a warranty replacement."
+      },
+      {
+        "id": "m30",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.4702,
+        "credited_confidence": 0.4702,
+        "p_correct": 0.4702,
+        "probabilities": {
+          "auto_reply": 0.2499,
+          "escalate_to_human": 0.4702,
+          "ignore": 0.2799
+        },
+        "text": "The app says my speaker is registered to an email address that isn't mine, and the proof-of-purchase form was rejected. Can someone call me?"
+      },
+      {
+        "id": "m31",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.5471,
+        "credited_confidence": 0.5471,
+        "p_correct": 0.5471,
+        "probabilities": {
+          "auto_reply": 0.1735,
+          "escalate_to_human": 0.5471,
+          "ignore": 0.2794
+        },
+        "text": "I ordered black and you sent white. I need the correct unit before Friday's event."
+      },
+      {
+        "id": "m32",
+        "label": "escalate_to_human",
+        "choice": "ignore",
+        "correct": false,
+        "answer_confidence": 0.3926,
+        "credited_confidence": 0.0,
+        "p_correct": 0.3809,
+        "probabilities": {
+          "auto_reply": 0.2265,
+          "escalate_to_human": 0.3809,
+          "ignore": 0.3926
+        },
+        "text": "There is a constant hiss even with no music playing. I already tried a different source and cable."
+      },
+      {
+        "id": "m33",
+        "label": "escalate_to_human",
+        "choice": "ignore",
+        "correct": false,
+        "answer_confidence": 0.5723,
+        "credited_confidence": 0.0,
+        "p_correct": 0.3094,
+        "probabilities": {
+          "auto_reply": 0.1183,
+          "escalate_to_human": 0.3094,
+          "ignore": 0.5723
+        },
+        "text": "Please cancel order 88210 and refund me. It has not shipped, and the website will not let me cancel it."
+      },
+      {
+        "id": "m34",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.6787,
+        "credited_confidence": 0.6787,
+        "p_correct": 0.6787,
+        "probabilities": {
+          "auto_reply": 0.1528,
+          "escalate_to_human": 0.6787,
+          "ignore": 0.1686
+        },
+        "text": "The battery lasts about twenty minutes, not the ten hours advertised. I would like a refund."
+      },
+      {
+        "id": "m35",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.5092,
+        "credited_confidence": 0.5092,
+        "p_correct": 0.5092,
+        "probabilities": {
+          "auto_reply": 0.3074,
+          "escalate_to_human": 0.1834,
+          "ignore": 0.5092
+        },
+        "text": "Congratulations, you have been selected for a $1,000 gift card. Click here to claim your prize."
+      },
+      {
+        "id": "m36",
+        "label": "ignore",
+        "choice": "auto_reply",
+        "correct": false,
+        "answer_confidence": 0.5705,
+        "credited_confidence": 0.0,
+        "p_correct": 0.3696,
+        "probabilities": {
+          "auto_reply": 0.5705,
+          "escalate_to_human": 0.0599,
+          "ignore": 0.3696
+        },
+        "text": "We offer SEO and backlink packages that will rank your site on Google. Reply YES for a proposal."
+      },
+      {
+        "id": "m37",
+        "label": "ignore",
+        "choice": "auto_reply",
+        "correct": false,
+        "answer_confidence": 0.4765,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2719,
+        "probabilities": {
+          "auto_reply": 0.4765,
+          "escalate_to_human": 0.2516,
+          "ignore": 0.2719
+        },
+        "text": "Urgent: verify your mailbox password at http://secure-login-reset.example within 24 hours or the account will be closed."
+      },
+      {
+        "id": "m38",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.3769,
+        "credited_confidence": 0.3769,
+        "p_correct": 0.3769,
+        "probabilities": {
+          "auto_reply": 0.2992,
+          "escalate_to_human": 0.3239,
+          "ignore": 0.3769
+        },
+        "text": "Hello, I am a recent graduate applying for a junior software role. My resume is attached."
+      },
+      {
+        "id": "m39",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.6889,
+        "credited_confidence": 0.6889,
+        "p_correct": 0.6889,
+        "probabilities": {
+          "auto_reply": 0.1965,
+          "escalate_to_human": 0.1146,
+          "ignore": 0.6889
+        },
+        "text": "New meme coin launching tonight. Early wallets get a 40% bonus. Join our Telegram for the contract address."
+      },
+      {
+        "id": "m40",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.5101,
+        "credited_confidence": 0.5101,
+        "p_correct": 0.5101,
+        "probabilities": {
+          "auto_reply": 0.3099,
+          "escalate_to_human": 0.1799,
+          "ignore": 0.5101
+        },
+        "text": "Buy 10,000 Instagram followers, cheap and instant. Message us on WhatsApp."
+      },
+      {
+        "id": "m41",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.4853,
+        "credited_confidence": 0.4853,
+        "p_correct": 0.4853,
+        "probabilities": {
+          "auto_reply": 0.37,
+          "escalate_to_human": 0.1447,
+          "ignore": 0.4853
+        },
+        "text": "asdf jjj qqq not a real message 12345 #####"
+      },
+      {
+        "id": "m42",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.3739,
+        "credited_confidence": 0.3739,
+        "p_correct": 0.3739,
+        "probabilities": {
+          "auto_reply": 0.3709,
+          "escalate_to_human": 0.2552,
+          "ignore": 0.3739
+        },
+        "text": "Dear Sir or Madam, our Shenzhen factory can supply Bluetooth speakers at a low price. Minimum order 500 units."
+      },
+      {
+        "id": "m43",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.4117,
+        "credited_confidence": 0.4117,
+        "p_correct": 0.4117,
+        "probabilities": {
+          "auto_reply": 0.2253,
+          "escalate_to_human": 0.363,
+          "ignore": 0.4117
+        },
+        "text": "You have one unread voice message. Call this premium-rate number to listen to it."
+      },
+      {
+        "id": "m44",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.5641,
+        "credited_confidence": 0.5641,
+        "p_correct": 0.5641,
+        "probabilities": {
+          "auto_reply": 0.3573,
+          "escalate_to_human": 0.0786,
+          "ignore": 0.5641
+        },
+        "text": "This is a reminder of your dentist appointment on Thursday at 2pm. Reply STOP to opt out."
+      },
+      {
+        "id": "m45",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.5017,
+        "credited_confidence": 0.5017,
+        "p_correct": 0.5017,
+        "probabilities": {
+          "auto_reply": 0.3625,
+          "escalate_to_human": 0.1359,
+          "ignore": 0.5017
+        },
+        "text": "Win a free phone. Forward this message to ten friends and enter your card details to qualify."
+      },
+      {
+        "id": "m46",
+        "label": "ignore",
+        "choice": "auto_reply",
+        "correct": false,
+        "answer_confidence": 0.4479,
+        "credited_confidence": 0.0,
+        "p_correct": 0.3225,
+        "probabilities": {
+          "auto_reply": 0.4479,
+          "escalate_to_human": 0.2296,
+          "ignore": 0.3225
+        },
+        "text": "We purchase customer returns and used electronics in bulk. Are you selling your surplus stock?"
+      },
+      {
+        "id": "m47",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.5521,
+        "credited_confidence": 0.5521,
+        "p_correct": 0.5521,
+        "probabilities": {
+          "auto_reply": 0.2489,
+          "escalate_to_human": 0.199,
+          "ignore": 0.5521
+        },
+        "text": "Your parcel is held at customs. Pay the release fee at the link below or it will be returned to the sender."
+      },
+      {
+        "id": "m48",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.3725,
+        "credited_confidence": 0.3725,
+        "p_correct": 0.3725,
+        "probabilities": {
+          "auto_reply": 0.3635,
+          "escalate_to_human": 0.264,
+          "ignore": 0.3725
+        },
+        "text": "Enjoyed your last article. I can write a guest post for you if you will link to my casino review site."
+      },
+      {
+        "id": "m49",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.69,
+        "credited_confidence": 0.69,
+        "p_correct": 0.69,
+        "probabilities": {
+          "auto_reply": 0.2515,
+          "escalate_to_human": 0.0585,
+          "ignore": 0.69
+        },
+        "text": "Automatic reply: I am out of the office until 12 October and will read email when I return."
+      },
+      {
+        "id": "m50",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.5235,
+        "credited_confidence": 0.5235,
+        "p_correct": 0.5235,
+        "probabilities": {
+          "auto_reply": 0.3071,
+          "escalate_to_human": 0.1694,
+          "ignore": 0.5235
+        },
+        "text": "Hi there, I would love to book 15 minutes this week to talk about a partnership and cross-promotion idea."
+      }
+    ]
+  },
+  "baseline": {
+    "ids": {
+      "auto_reply": "a0",
+      "escalate_to_human": "e0",
+      "ignore": "i0"
+    },
+    "baseline": true,
+    "mean_credited_confidence": 0.27854,
+    "accuracy": 0.38,
+    "n_correct": 19,
+    "mean_p_correct": 0.40674,
+    "macro_credited_confidence": 0.27433394607843137,
+    "n_correct_above_threshold": 12,
+    "by_label": {
+      "auto_reply": {
+        "n": 17,
+        "n_correct": 0,
+        "mean_credited_confidence": 0.0
+      },
+      "escalate_to_human": {
+        "n": 17,
+        "n_correct": 17,
+        "mean_credited_confidence": 0.7589705882352941
+      },
+      "ignore": {
+        "n": 16,
+        "n_correct": 2,
+        "mean_credited_confidence": 0.06403125
+      }
+    },
+    "texts": {
+      "auto_reply": "The issue is simple and can be addressed automatically.",
+      "escalate_to_human": "The hardware issue or replacement request needs a human agent.",
+      "ignore": "The message is spam or completely irrelevant."
+    },
+    "messages": [
+      {
+        "id": "m01",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.5988,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2135,
+        "probabilities": {
+          "auto_reply": 0.2135,
+          "escalate_to_human": 0.5988,
+          "ignore": 0.1877
+        },
+        "text": "How do I reset my password? I can't remember it."
+      },
+      {
+        "id": "m02",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.6111,
+        "credited_confidence": 0.0,
+        "p_correct": 0.1849,
+        "probabilities": {
+          "auto_reply": 0.1849,
+          "escalate_to_human": 0.6111,
+          "ignore": 0.204
+        },
+        "text": "This is ridiculous, where is the tracking number on the website? I can't find the page."
+      },
+      {
+        "id": "m03",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.6217,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2043,
+        "probabilities": {
+          "auto_reply": 0.2043,
+          "escalate_to_human": 0.6217,
+          "ignore": 0.174
+        },
+        "text": "How do I pair the speaker with my phone over Bluetooth?"
+      },
+      {
+        "id": "m04",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.5115,
+        "credited_confidence": 0.0,
+        "p_correct": 0.1617,
+        "probabilities": {
+          "auto_reply": 0.1617,
+          "escalate_to_human": 0.5115,
+          "ignore": 0.3268
+        },
+        "text": "Can you tell me how to change the email address on my account?"
+      },
+      {
+        "id": "m05",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.6534,
+        "credited_confidence": 0.0,
+        "p_correct": 0.1528,
+        "probabilities": {
+          "auto_reply": 0.1528,
+          "escalate_to_human": 0.6534,
+          "ignore": 0.1938
+        },
+        "text": "What is your returns window? I'm not sending anything back, I just want the policy."
+      },
+      {
+        "id": "m06",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.6068,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2123,
+        "probabilities": {
+          "auto_reply": 0.2123,
+          "escalate_to_human": 0.6068,
+          "ignore": 0.1809
+        },
+        "text": "How do I update the firmware on the SoundBar 200?"
+      },
+      {
+        "id": "m07",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.4134,
+        "credited_confidence": 0.0,
+        "p_correct": 0.222,
+        "probabilities": {
+          "auto_reply": 0.222,
+          "escalate_to_human": 0.4134,
+          "ignore": 0.3646
+        },
+        "text": "How do I turn off marketing emails?"
+      },
+      {
+        "id": "m08",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.6678,
+        "credited_confidence": 0.0,
+        "p_correct": 0.1431,
+        "probabilities": {
+          "auto_reply": 0.1431,
+          "escalate_to_human": 0.6678,
+          "ignore": 0.1891
+        },
+        "text": "Does the standard warranty cover accidental drops, or only manufacturing faults? I only want what the policy says."
+      },
+      {
+        "id": "m09",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.5174,
+        "credited_confidence": 0.0,
+        "p_correct": 0.1735,
+        "probabilities": {
+          "auto_reply": 0.1735,
+          "escalate_to_human": 0.5174,
+          "ignore": 0.3091
+        },
+        "text": "Where do I download the iOS app?"
+      },
+      {
+        "id": "m10",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.604,
+        "credited_confidence": 0.0,
+        "p_correct": 0.235,
+        "probabilities": {
+          "auto_reply": 0.235,
+          "escalate_to_human": 0.604,
+          "ignore": 0.161
+        },
+        "text": "How do I turn off the volume limit in the app? Playback is quieter than I expected."
+      },
+      {
+        "id": "m11",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.6724,
+        "credited_confidence": 0.0,
+        "p_correct": 0.1726,
+        "probabilities": {
+          "auto_reply": 0.1726,
+          "escalate_to_human": 0.6724,
+          "ignore": 0.155
+        },
+        "text": "How do I add a second user to my household account?"
+      },
+      {
+        "id": "m12",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.5765,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2056,
+        "probabilities": {
+          "auto_reply": 0.2056,
+          "escalate_to_human": 0.5765,
+          "ignore": 0.2179
+        },
+        "text": "Which payment methods can I use at checkout?"
+      },
+      {
+        "id": "m13",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.4462,
+        "credited_confidence": 0.0,
+        "p_correct": 0.193,
+        "probabilities": {
+          "auto_reply": 0.193,
+          "escalate_to_human": 0.4462,
+          "ignore": 0.3608
+        },
+        "text": "Where is the user manual PDF for the Mini Speaker?"
+      },
+      {
+        "id": "m14",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.4383,
+        "credited_confidence": 0.0,
+        "p_correct": 0.249,
+        "probabilities": {
+          "auto_reply": 0.249,
+          "escalate_to_human": 0.4383,
+          "ignore": 0.3127
+        },
+        "text": "How do I see my past orders once I'm logged in?"
+      },
+      {
+        "id": "m15",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.79,
+        "credited_confidence": 0.0,
+        "p_correct": 0.0985,
+        "probabilities": {
+          "auto_reply": 0.0985,
+          "escalate_to_human": 0.79,
+          "ignore": 0.1115
+        },
+        "text": "What hours is customer support open?"
+      },
+      {
+        "id": "m16",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.6298,
+        "credited_confidence": 0.0,
+        "p_correct": 0.1944,
+        "probabilities": {
+          "auto_reply": 0.1944,
+          "escalate_to_human": 0.6298,
+          "ignore": 0.1758
+        },
+        "text": "How do I switch the speaker from Bluetooth to the aux input?"
+      },
+      {
+        "id": "m17",
+        "label": "auto_reply",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.594,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2298,
+        "probabilities": {
+          "auto_reply": 0.2298,
+          "escalate_to_human": 0.594,
+          "ignore": 0.1762
+        },
+        "text": "How do I rename my speaker in the app?"
+      },
+      {
+        "id": "m18",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.7814,
+        "credited_confidence": 0.7814,
+        "p_correct": 0.7814,
+        "probabilities": {
+          "auto_reply": 0.1202,
+          "escalate_to_human": 0.7814,
+          "ignore": 0.0984
+        },
+        "text": "My speaker crackles when playing audio."
+      },
+      {
+        "id": "m19",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.7513,
+        "credited_confidence": 0.7513,
+        "p_correct": 0.7513,
+        "probabilities": {
+          "auto_reply": 0.1653,
+          "escalate_to_human": 0.7513,
+          "ignore": 0.0833
+        },
+        "text": "The left earcup on my headphones stopped working after two weeks. I need a replacement."
+      },
+      {
+        "id": "m20",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.8542,
+        "credited_confidence": 0.8542,
+        "p_correct": 0.8542,
+        "probabilities": {
+          "auto_reply": 0.0964,
+          "escalate_to_human": 0.8542,
+          "ignore": 0.0494
+        },
+        "text": "I was charged twice for order 44921. Please refund the duplicate payment."
+      },
+      {
+        "id": "m21",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.841,
+        "credited_confidence": 0.841,
+        "p_correct": 0.841,
+        "probabilities": {
+          "auto_reply": 0.0796,
+          "escalate_to_human": 0.841,
+          "ignore": 0.0795
+        },
+        "text": "The package arrived crushed and the speaker grille is dented."
+      },
+      {
+        "id": "m22",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.8534,
+        "credited_confidence": 0.8534,
+        "p_correct": 0.8534,
+        "probabilities": {
+          "auto_reply": 0.0808,
+          "escalate_to_human": 0.8534,
+          "ignore": 0.0658
+        },
+        "text": "This unit gets hot and smells like burning plastic. I unplugged it. Please advise urgently."
+      },
+      {
+        "id": "m23",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.6792,
+        "credited_confidence": 0.6792,
+        "p_correct": 0.6792,
+        "probabilities": {
+          "auto_reply": 0.1534,
+          "escalate_to_human": 0.6792,
+          "ignore": 0.1674
+        },
+        "text": "I want to return this speaker. It cuts out every few minutes and the steps on your help page did not fix it."
+      },
+      {
+        "id": "m24",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.6714,
+        "credited_confidence": 0.6714,
+        "p_correct": 0.6714,
+        "probabilities": {
+          "auto_reply": 0.1698,
+          "escalate_to_human": 0.6714,
+          "ignore": 0.1588
+        },
+        "text": "Someone changed my password and placed an order I didn't make. Please lock the account."
+      },
+      {
+        "id": "m25",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.7116,
+        "credited_confidence": 0.7116,
+        "p_correct": 0.7116,
+        "probabilities": {
+          "auto_reply": 0.1184,
+          "escalate_to_human": 0.7116,
+          "ignore": 0.17
+        },
+        "text": "I've emailed three times about a missing delivery and nobody has replied. This is unacceptable."
+      },
+      {
+        "id": "m26",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.926,
+        "credited_confidence": 0.926,
+        "p_correct": 0.926,
+        "probabilities": {
+          "auto_reply": 0.0407,
+          "escalate_to_human": 0.926,
+          "ignore": 0.0333
+        },
+        "text": "Your driver left the parcel in the rain and the box is soaked through. I need a person to sort this out today."
+      },
+      {
+        "id": "m27",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.8154,
+        "credited_confidence": 0.8154,
+        "p_correct": 0.8154,
+        "probabilities": {
+          "auto_reply": 0.1079,
+          "escalate_to_human": 0.8154,
+          "ignore": 0.0767
+        },
+        "text": "The invoice total is higher than the price I saw at checkout. I need the charge corrected."
+      },
+      {
+        "id": "m28",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.8866,
+        "credited_confidence": 0.8866,
+        "p_correct": 0.8866,
+        "probabilities": {
+          "auto_reply": 0.0766,
+          "escalate_to_human": 0.8866,
+          "ignore": 0.0369
+        },
+        "text": "I am writing on behalf of a customer who was injured when a wall-mount bracket failed. We need to discuss liability."
+      },
+      {
+        "id": "m29",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.7773,
+        "credited_confidence": 0.7773,
+        "p_correct": 0.7773,
+        "probabilities": {
+          "auto_reply": 0.1527,
+          "escalate_to_human": 0.7773,
+          "ignore": 0.0699
+        },
+        "text": "The speaker will not power on at all, even with a different cable. I want a warranty replacement."
+      },
+      {
+        "id": "m30",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.6201,
+        "credited_confidence": 0.6201,
+        "p_correct": 0.6201,
+        "probabilities": {
+          "auto_reply": 0.1306,
+          "escalate_to_human": 0.6201,
+          "ignore": 0.2493
+        },
+        "text": "The app says my speaker is registered to an email address that isn't mine, and the proof-of-purchase form was rejected. Can someone call me?"
+      },
+      {
+        "id": "m31",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.7936,
+        "credited_confidence": 0.7936,
+        "p_correct": 0.7936,
+        "probabilities": {
+          "auto_reply": 0.1118,
+          "escalate_to_human": 0.7936,
+          "ignore": 0.0947
+        },
+        "text": "I ordered black and you sent white. I need the correct unit before Friday's event."
+      },
+      {
+        "id": "m32",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.6785,
+        "credited_confidence": 0.6785,
+        "p_correct": 0.6785,
+        "probabilities": {
+          "auto_reply": 0.1556,
+          "escalate_to_human": 0.6785,
+          "ignore": 0.1659
+        },
+        "text": "There is a constant hiss even with no music playing. I already tried a different source and cable."
+      },
+      {
+        "id": "m33",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.532,
+        "credited_confidence": 0.532,
+        "p_correct": 0.532,
+        "probabilities": {
+          "auto_reply": 0.146,
+          "escalate_to_human": 0.532,
+          "ignore": 0.322
+        },
+        "text": "Please cancel order 88210 and refund me. It has not shipped, and the website will not let me cancel it."
+      },
+      {
+        "id": "m34",
+        "label": "escalate_to_human",
+        "choice": "escalate_to_human",
+        "correct": true,
+        "answer_confidence": 0.7295,
+        "credited_confidence": 0.7295,
+        "p_correct": 0.7295,
+        "probabilities": {
+          "auto_reply": 0.1542,
+          "escalate_to_human": 0.7295,
+          "ignore": 0.1163
+        },
+        "text": "The battery lasts about twenty minutes, not the ten hours advertised. I would like a refund."
+      },
+      {
+        "id": "m35",
+        "label": "ignore",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.5209,
+        "credited_confidence": 0.0,
+        "p_correct": 0.29,
+        "probabilities": {
+          "auto_reply": 0.1891,
+          "escalate_to_human": 0.5209,
+          "ignore": 0.29
+        },
+        "text": "Congratulations, you have been selected for a $1,000 gift card. Click here to claim your prize."
+      },
+      {
+        "id": "m36",
+        "label": "ignore",
+        "choice": "auto_reply",
+        "correct": false,
+        "answer_confidence": 0.9254,
+        "credited_confidence": 0.0,
+        "p_correct": 0.0423,
+        "probabilities": {
+          "auto_reply": 0.9254,
+          "escalate_to_human": 0.0323,
+          "ignore": 0.0423
+        },
+        "text": "We offer SEO and backlink packages that will rank your site on Google. Reply YES for a proposal."
+      },
+      {
+        "id": "m37",
+        "label": "ignore",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.4284,
+        "credited_confidence": 0.0,
+        "p_correct": 0.1952,
+        "probabilities": {
+          "auto_reply": 0.3764,
+          "escalate_to_human": 0.4284,
+          "ignore": 0.1952
+        },
+        "text": "Urgent: verify your mailbox password at http://secure-login-reset.example within 24 hours or the account will be closed."
+      },
+      {
+        "id": "m38",
+        "label": "ignore",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.4449,
+        "credited_confidence": 0.0,
+        "p_correct": 0.3637,
+        "probabilities": {
+          "auto_reply": 0.1914,
+          "escalate_to_human": 0.4449,
+          "ignore": 0.3637
+        },
+        "text": "Hello, I am a recent graduate applying for a junior software role. My resume is attached."
+      },
+      {
+        "id": "m39",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.4124,
+        "credited_confidence": 0.4124,
+        "p_correct": 0.4124,
+        "probabilities": {
+          "auto_reply": 0.2467,
+          "escalate_to_human": 0.3409,
+          "ignore": 0.4124
+        },
+        "text": "New meme coin launching tonight. Early wallets get a 40% bonus. Join our Telegram for the contract address."
+      },
+      {
+        "id": "m40",
+        "label": "ignore",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.4601,
+        "credited_confidence": 0.0,
+        "p_correct": 0.3308,
+        "probabilities": {
+          "auto_reply": 0.2091,
+          "escalate_to_human": 0.4601,
+          "ignore": 0.3308
+        },
+        "text": "Buy 10,000 Instagram followers, cheap and instant. Message us on WhatsApp."
+      },
+      {
+        "id": "m41",
+        "label": "ignore",
+        "choice": "ignore",
+        "correct": true,
+        "answer_confidence": 0.6121,
+        "credited_confidence": 0.6121,
+        "p_correct": 0.6121,
+        "probabilities": {
+          "auto_reply": 0.1077,
+          "escalate_to_human": 0.2802,
+          "ignore": 0.6121
+        },
+        "text": "asdf jjj qqq not a real message 12345 #####"
+      },
+      {
+        "id": "m42",
+        "label": "ignore",
+        "choice": "auto_reply",
+        "correct": false,
+        "answer_confidence": 0.3884,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2379,
+        "probabilities": {
+          "auto_reply": 0.3884,
+          "escalate_to_human": 0.3736,
+          "ignore": 0.2379
+        },
+        "text": "Dear Sir or Madam, our Shenzhen factory can supply Bluetooth speakers at a low price. Minimum order 500 units."
+      },
+      {
+        "id": "m43",
+        "label": "ignore",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.4544,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2853,
+        "probabilities": {
+          "auto_reply": 0.2603,
+          "escalate_to_human": 0.4544,
+          "ignore": 0.2853
+        },
+        "text": "You have one unread voice message. Call this premium-rate number to listen to it."
+      },
+      {
+        "id": "m44",
+        "label": "ignore",
+        "choice": "auto_reply",
+        "correct": false,
+        "answer_confidence": 0.7388,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2069,
+        "probabilities": {
+          "auto_reply": 0.7388,
+          "escalate_to_human": 0.0543,
+          "ignore": 0.2069
+        },
+        "text": "This is a reminder of your dentist appointment on Thursday at 2pm. Reply STOP to opt out."
+      },
+      {
+        "id": "m45",
+        "label": "ignore",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.6793,
+        "credited_confidence": 0.0,
+        "p_correct": 0.1378,
+        "probabilities": {
+          "auto_reply": 0.183,
+          "escalate_to_human": 0.6793,
+          "ignore": 0.1378
+        },
+        "text": "Win a free phone. Forward this message to ten friends and enter your card details to qualify."
+      },
+      {
+        "id": "m46",
+        "label": "ignore",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.3793,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2652,
+        "probabilities": {
+          "auto_reply": 0.3555,
+          "escalate_to_human": 0.3793,
+          "ignore": 0.2652
+        },
+        "text": "We purchase customer returns and used electronics in bulk. Are you selling your surplus stock?"
+      },
+      {
+        "id": "m47",
+        "label": "ignore",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.4692,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2544,
+        "probabilities": {
+          "auto_reply": 0.2763,
+          "escalate_to_human": 0.4692,
+          "ignore": 0.2544
+        },
+        "text": "Your parcel is held at customs. Pay the release fee at the link below or it will be returned to the sender."
+      },
+      {
+        "id": "m48",
+        "label": "ignore",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.5733,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2521,
+        "probabilities": {
+          "auto_reply": 0.1746,
+          "escalate_to_human": 0.5733,
+          "ignore": 0.2521
+        },
+        "text": "Enjoyed your last article. I can write a guest post for you if you will link to my casino review site."
+      },
+      {
+        "id": "m49",
+        "label": "ignore",
+        "choice": "auto_reply",
+        "correct": false,
+        "answer_confidence": 0.9321,
+        "credited_confidence": 0.0,
+        "p_correct": 0.0598,
+        "probabilities": {
+          "auto_reply": 0.9321,
+          "escalate_to_human": 0.0081,
+          "ignore": 0.0598
+        },
+        "text": "Automatic reply: I am out of the office until 12 October and will read email when I return."
+      },
+      {
+        "id": "m50",
+        "label": "ignore",
+        "choice": "escalate_to_human",
+        "correct": false,
+        "answer_confidence": 0.4218,
+        "credited_confidence": 0.0,
+        "p_correct": 0.2426,
+        "probabilities": {
+          "auto_reply": 0.3356,
+          "escalate_to_human": 0.4218,
+          "ignore": 0.2426
+        },
+        "text": "Hi there, I would love to book 15 minutes this week to talk about a partnership and cross-promotion idea."
+      }
+    ]
+  },
+  "leaderboard": [
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e3",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.437872,
+      "accuracy": 0.82,
+      "n_correct": 41,
+      "mean_p_correct": 0.49400599999999995,
+      "macro_credited_confidence": 0.4373253676470588,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 14,
+          "mean_credited_confidence": 0.42411176470588235
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 14,
+          "mean_credited_confidence": 0.47787058823529405
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.40999375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a8",
+        "escalate_to_human": "e3",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.436406,
+      "accuracy": 0.78,
+      "n_correct": 39,
+      "mean_p_correct": 0.50285,
+      "macro_credited_confidence": 0.4355455882352941,
+      "n_correct_above_threshold": 8,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.3814705882352941
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.5326411764705883
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.392525
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e1",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.427136,
+      "accuracy": 0.8,
+      "n_correct": 40,
+      "mean_p_correct": 0.488904,
+      "macro_credited_confidence": 0.4267547794117647,
+      "n_correct_above_threshold": 2,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.3826
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.4899705882352941
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.40769375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a8",
+        "escalate_to_human": "e1",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.4252,
+      "accuracy": 0.76,
+      "n_correct": 38,
+      "mean_p_correct": 0.495834,
+      "macro_credited_confidence": 0.42606764705882355,
+      "n_correct_above_threshold": 4,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 10,
+          "mean_credited_confidence": 0.28515882352941174
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.5235941176470588
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.46945000000000003
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e6",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.42497999999999997,
+      "accuracy": 0.78,
+      "n_correct": 39,
+      "mean_p_correct": 0.490054,
+      "macro_credited_confidence": 0.42338198529411764,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 14,
+          "mean_credited_confidence": 0.4259235294117647
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.5007411764705882
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 10,
+          "mean_credited_confidence": 0.34348125
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e8",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.42445,
+      "accuracy": 0.76,
+      "n_correct": 38,
+      "mean_p_correct": 0.491364,
+      "macro_credited_confidence": 0.4218469362745098,
+      "n_correct_above_threshold": 2,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 14,
+          "mean_credited_confidence": 0.45552941176470585
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.5183176470588235
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 9,
+          "mean_credited_confidence": 0.29169375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e7",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.410088,
+      "accuracy": 0.76,
+      "n_correct": 38,
+      "mean_p_correct": 0.48682200000000003,
+      "macro_credited_confidence": 0.40968345588235294,
+      "n_correct_above_threshold": 3,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 14,
+          "mean_credited_confidence": 0.4540411764705882
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.3855529411764706
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.38945625
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e4",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.401972,
+      "accuracy": 0.72,
+      "n_correct": 36,
+      "mean_p_correct": 0.485692,
+      "macro_credited_confidence": 0.3975520833333333,
+      "n_correct_above_threshold": 3,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 14,
+          "mean_credited_confidence": 0.44762352941176475
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 16,
+          "mean_credited_confidence": 0.5684764705882352
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 6,
+          "mean_credited_confidence": 0.17655625
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e5",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.39596200000000004,
+      "accuracy": 0.74,
+      "n_correct": 37,
+      "mean_p_correct": 0.483786,
+      "macro_credited_confidence": 0.3951003676470588,
+      "n_correct_above_threshold": 2,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.46506470588235294
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.36821764705882354
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 10,
+          "mean_credited_confidence": 0.35201875
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e3",
+        "ignore": "i3"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.38809,
+      "accuracy": 0.78,
+      "n_correct": 39,
+      "mean_p_correct": 0.46415399999999996,
+      "macro_credited_confidence": 0.38803210784313724,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.33455882352941174
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 16,
+          "mean_credited_confidence": 0.4444
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.3851375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a2",
+        "escalate_to_human": "e1",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.38034599999999996,
+      "accuracy": 0.74,
+      "n_correct": 37,
+      "mean_p_correct": 0.453756,
+      "macro_credited_confidence": 0.38121421568627456,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 14,
+          "mean_credited_confidence": 0.42660588235294117
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 10,
+          "mean_credited_confidence": 0.29241176470588237
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.42462500000000003
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e2",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.37814,
+      "accuracy": 0.66,
+      "n_correct": 33,
+      "mean_p_correct": 0.4693,
+      "macro_credited_confidence": 0.3750341911764706,
+      "n_correct_above_threshold": 7,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 10,
+          "mean_credited_confidence": 0.2781058823529412
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 16,
+          "mean_credited_confidence": 0.6272529411764706
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 7,
+          "mean_credited_confidence": 0.21974375000000002
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e1",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.377658,
+      "accuracy": 0.68,
+      "n_correct": 34,
+      "mean_p_correct": 0.47581,
+      "macro_credited_confidence": 0.3768490196078431,
+      "n_correct_above_threshold": 6,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 10,
+          "mean_credited_confidence": 0.2704588235294118
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.5236882352941176
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 9,
+          "mean_credited_confidence": 0.33640000000000003
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a9",
+        "escalate_to_human": "e3",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.374884,
+      "accuracy": 0.74,
+      "n_correct": 37,
+      "mean_p_correct": 0.44812399999999997,
+      "macro_credited_confidence": 0.3760628676470588,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.36654117647058826
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.32664117647058827
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.43500625
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e3",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.373154,
+      "accuracy": 0.66,
+      "n_correct": 33,
+      "mean_p_correct": 0.483624,
+      "macro_credited_confidence": 0.37245772058823534,
+      "n_correct_above_threshold": 5,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 8,
+          "mean_credited_confidence": 0.23294117647058823
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.5467882352941177
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 10,
+          "mean_credited_confidence": 0.33764375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e1",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.35747799999999996,
+      "accuracy": 0.68,
+      "n_correct": 34,
+      "mean_p_correct": 0.44397,
+      "macro_credited_confidence": 0.359934681372549,
+      "n_correct_above_threshold": 5,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 8,
+          "mean_credited_confidence": 0.2005235294117647
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.3965117647058824
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.48276875
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e3",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.357248,
+      "accuracy": 0.66,
+      "n_correct": 33,
+      "mean_p_correct": 0.45354999999999995,
+      "macro_credited_confidence": 0.3586865196078431,
+      "n_correct_above_threshold": 5,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 9,
+          "mean_credited_confidence": 0.2385588235294118
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.4068882352941176
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.4306125
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a4",
+        "escalate_to_human": "e3",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.35300200000000004,
+      "accuracy": 0.68,
+      "n_correct": 34,
+      "mean_p_correct": 0.444032,
+      "macro_credited_confidence": 0.34962585784313727,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 16,
+          "mean_credited_confidence": 0.5050941176470589
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.3629647058823529
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 6,
+          "mean_credited_confidence": 0.18081875
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e5",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.350142,
+      "accuracy": 0.66,
+      "n_correct": 33,
+      "mean_p_correct": 0.44778,
+      "macro_credited_confidence": 0.3521224264705882,
+      "n_correct_above_threshold": 4,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.30476470588235294
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 10,
+          "mean_credited_confidence": 0.3004588235294118
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.45114375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a6",
+        "escalate_to_human": "e1",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.34489400000000003,
+      "accuracy": 0.68,
+      "n_correct": 34,
+      "mean_p_correct": 0.442082,
+      "macro_credited_confidence": 0.34466286764705883,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.38230588235294116
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.3185764705882353
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.33310625
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e6",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.34086599999999995,
+      "accuracy": 0.6,
+      "n_correct": 30,
+      "mean_p_correct": 0.452104,
+      "macro_credited_confidence": 0.3430193627450981,
+      "n_correct_above_threshold": 5,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 4,
+          "mean_credited_confidence": 0.10128235294117648
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 14,
+          "mean_credited_confidence": 0.47708823529411765
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.4506875
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e3",
+        "ignore": "i4"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.33962800000000004,
+      "accuracy": 0.66,
+      "n_correct": 33,
+      "mean_p_correct": 0.45244,
+      "macro_credited_confidence": 0.3410091911764706,
+      "n_correct_above_threshold": 4,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.3578176470588236
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 9,
+          "mean_credited_confidence": 0.2551411764705882
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.41006875
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e7",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.336676,
+      "accuracy": 0.66,
+      "n_correct": 33,
+      "mean_p_correct": 0.436306,
+      "macro_credited_confidence": 0.3385242647058823,
+      "n_correct_above_threshold": 4,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 10,
+          "mean_credited_confidence": 0.26742352941176467
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.31721176470588236
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.4309375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a9",
+        "escalate_to_human": "e1",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.333892,
+      "accuracy": 0.64,
+      "n_correct": 32,
+      "mean_p_correct": 0.44598999999999994,
+      "macro_credited_confidence": 0.3356220588235294,
+      "n_correct_above_threshold": 5,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 8,
+          "mean_credited_confidence": 0.22193529411764706
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.3628058823529412
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.422125
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e1",
+        "ignore": "i6"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.332978,
+      "accuracy": 0.62,
+      "n_correct": 31,
+      "mean_p_correct": 0.44699399999999995,
+      "macro_credited_confidence": 0.33732254901960784,
+      "n_correct_above_threshold": 3,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 4,
+          "mean_credited_confidence": 0.09955294117647058
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.357864705882353
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.55455
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a6",
+        "escalate_to_human": "e3",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.332016,
+      "accuracy": 0.62,
+      "n_correct": 31,
+      "mean_p_correct": 0.451774,
+      "macro_credited_confidence": 0.328961887254902,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.4539529411764706
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.3566764705882353
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 6,
+          "mean_credited_confidence": 0.17625625
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e8",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.329664,
+      "accuracy": 0.58,
+      "n_correct": 29,
+      "mean_p_correct": 0.446368,
+      "macro_credited_confidence": 0.3310208333333333,
+      "n_correct_above_threshold": 4,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 3,
+          "mean_credited_confidence": 0.06974705882352941
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.5244529411764706
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.3988625
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a2",
+        "escalate_to_human": "e3",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.328046,
+      "accuracy": 0.6,
+      "n_correct": 30,
+      "mean_p_correct": 0.4551,
+      "macro_credited_confidence": 0.32526151960784316,
+      "n_correct_above_threshold": 2,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 16,
+          "mean_credited_confidence": 0.5402058823529412
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 8,
+          "mean_credited_confidence": 0.24954117647058827
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 6,
+          "mean_credited_confidence": 0.1860375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a3",
+        "escalate_to_human": "e3",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.327222,
+      "accuracy": 0.64,
+      "n_correct": 32,
+      "mean_p_correct": 0.439086,
+      "macro_credited_confidence": 0.3262990196078432,
+      "n_correct_above_threshold": 3,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.3224
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.3763470588235294
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 8,
+          "mean_credited_confidence": 0.28015
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e3",
+        "ignore": "i7"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.325982,
+      "accuracy": 0.56,
+      "n_correct": 28,
+      "mean_p_correct": 0.45742400000000005,
+      "macro_credited_confidence": 0.33134375,
+      "n_correct_above_threshold": 5,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 9,
+          "mean_credited_confidence": 0.2676588235294118
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 4,
+          "mean_credited_confidence": 0.12694117647058822
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.59943125
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e0",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.32284799999999997,
+      "accuracy": 0.46,
+      "n_correct": 23,
+      "mean_p_correct": 0.481776,
+      "macro_credited_confidence": 0.31870073529411763,
+      "n_correct_above_threshold": 16,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 3,
+          "mean_credited_confidence": 0.08445294117647059
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 17,
+          "mean_credited_confidence": 0.7603117647058824
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 3,
+          "mean_credited_confidence": 0.11133749999999999
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e9",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.316082,
+      "accuracy": 0.5,
+      "n_correct": 25,
+      "mean_p_correct": 0.449146,
+      "macro_credited_confidence": 0.3140466911764706,
+      "n_correct_above_threshold": 9,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 2,
+          "mean_credited_confidence": 0.05762941176470588
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 16,
+          "mean_credited_confidence": 0.6722294117647059
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 7,
+          "mean_credited_confidence": 0.21228125
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e3",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.31492000000000003,
+      "accuracy": 0.6,
+      "n_correct": 30,
+      "mean_p_correct": 0.43593000000000004,
+      "macro_credited_confidence": 0.31612426470588234,
+      "n_correct_above_threshold": 3,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 8,
+          "mean_credited_confidence": 0.25431176470588235
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.3177235294117647
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.3763375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e1",
+        "ignore": "i7"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.311698,
+      "accuracy": 0.52,
+      "n_correct": 26,
+      "mean_p_correct": 0.443094,
+      "macro_credited_confidence": 0.3168214460784314,
+      "n_correct_above_threshold": 7,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 7,
+          "mean_credited_confidence": 0.19324117647058822
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 6,
+          "mean_credited_confidence": 0.18422941176470586
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.57299375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e0",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.311274,
+      "accuracy": 0.42,
+      "n_correct": 21,
+      "mean_p_correct": 0.43126800000000004,
+      "macro_credited_confidence": 0.307768137254902,
+      "n_correct_above_threshold": 15,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 0,
+          "mean_credited_confidence": 0.0
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 17,
+          "mean_credited_confidence": 0.7908294117647059
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 4,
+          "mean_credited_confidence": 0.132475
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e3",
+        "ignore": "i2"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.308922,
+      "accuracy": 0.6,
+      "n_correct": 30,
+      "mean_p_correct": 0.435656,
+      "macro_credited_confidence": 0.309488112745098,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 9,
+          "mean_credited_confidence": 0.28112352941176466
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.3095470588235294
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 10,
+          "mean_credited_confidence": 0.33779375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a7",
+        "escalate_to_human": "e3",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.307544,
+      "accuracy": 0.6,
+      "n_correct": 30,
+      "mean_p_correct": 0.413596,
+      "macro_credited_confidence": 0.3033363970588235,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 14,
+          "mean_credited_confidence": 0.42819999999999997
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.38885294117647057
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 3,
+          "mean_credited_confidence": 0.09295625
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e3",
+        "ignore": "i6"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.30711,
+      "accuracy": 0.6,
+      "n_correct": 30,
+      "mean_p_correct": 0.436238,
+      "macro_credited_confidence": 0.3096577205882353,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 9,
+          "mean_credited_confidence": 0.26951176470588234
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 8,
+          "mean_credited_confidence": 0.22241764705882353
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.43704375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a8",
+        "escalate_to_human": "e0",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.303978,
+      "accuracy": 0.44,
+      "n_correct": 22,
+      "mean_p_correct": 0.44272599999999995,
+      "macro_credited_confidence": 0.3016987745098039,
+      "n_correct_above_threshold": 13,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 0,
+          "mean_credited_confidence": 0.0
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 17,
+          "mean_credited_confidence": 0.7173588235294117
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 5,
+          "mean_credited_confidence": 0.1877375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e1",
+        "ignore": "i3"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.302826,
+      "accuracy": 0.6,
+      "n_correct": 30,
+      "mean_p_correct": 0.425814,
+      "macro_credited_confidence": 0.30403823529411766,
+      "n_correct_above_threshold": 3,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 4,
+          "mean_credited_confidence": 0.09812941176470588
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.44933529411764705
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.36465000000000003
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a3",
+        "escalate_to_human": "e1",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.299506,
+      "accuracy": 0.6,
+      "n_correct": 30,
+      "mean_p_correct": 0.41714,
+      "macro_credited_confidence": 0.29719264705882353,
+      "n_correct_above_threshold": 2,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.2837058823529412
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 14,
+          "mean_credited_confidence": 0.4263470588235294
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 5,
+          "mean_credited_confidence": 0.181525
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e3",
+        "ignore": "i5"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.292646,
+      "accuracy": 0.6,
+      "n_correct": 30,
+      "mean_p_correct": 0.428274,
+      "macro_credited_confidence": 0.29396776960784315,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 9,
+          "mean_credited_confidence": 0.25050588235294113
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 10,
+          "mean_credited_confidence": 0.27134117647058825
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.36005625
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a4",
+        "escalate_to_human": "e1",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.289922,
+      "accuracy": 0.58,
+      "n_correct": 29,
+      "mean_p_correct": 0.41567,
+      "macro_credited_confidence": 0.28853321078431377,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.38387058823529413
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 9,
+          "mean_credited_confidence": 0.2626352941176471
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 7,
+          "mean_credited_confidence": 0.21909375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a0",
+        "escalate_to_human": "e3",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.289562,
+      "accuracy": 0.56,
+      "n_correct": 28,
+      "mean_p_correct": 0.41359999999999997,
+      "macro_credited_confidence": 0.2880012254901961,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 6,
+          "mean_credited_confidence": 0.15236470588235296
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.5016764705882353
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 7,
+          "mean_credited_confidence": 0.2099625
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e0",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.289018,
+      "accuracy": 0.42,
+      "n_correct": 21,
+      "mean_p_correct": 0.435588,
+      "macro_credited_confidence": 0.2859071078431372,
+      "n_correct_above_threshold": 10,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 0,
+          "mean_credited_confidence": 0.0
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 17,
+          "mean_credited_confidence": 0.7273588235294117
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 4,
+          "mean_credited_confidence": 0.1303625
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e1",
+        "ignore": "i5"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.288646,
+      "accuracy": 0.54,
+      "n_correct": 27,
+      "mean_p_correct": 0.427506,
+      "macro_credited_confidence": 0.29114411764705883,
+      "n_correct_above_threshold": 3,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 2,
+          "mean_credited_confidence": 0.05073529411764706
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.4066470588235294
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.41605
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e2",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.287348,
+      "accuracy": 0.48,
+      "n_correct": 24,
+      "mean_p_correct": 0.427344,
+      "macro_credited_confidence": 0.2849509803921569,
+      "n_correct_above_threshold": 5,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 2,
+          "mean_credited_confidence": 0.053735294117647055
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 17,
+          "mean_credited_confidence": 0.6360176470588236
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 5,
+          "mean_credited_confidence": 0.1651
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e1",
+        "ignore": "i2"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.283182,
+      "accuracy": 0.56,
+      "n_correct": 28,
+      "mean_p_correct": 0.40730200000000005,
+      "macro_credited_confidence": 0.2860359068627451,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 4,
+          "mean_credited_confidence": 0.08993529411764706
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.33944117647058825
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.42873125
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a3",
+        "escalate_to_human": "e0",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.282746,
+      "accuracy": 0.4,
+      "n_correct": 20,
+      "mean_p_correct": 0.41025399999999995,
+      "macro_credited_confidence": 0.2791308823529412,
+      "n_correct_above_threshold": 12,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 0,
+          "mean_credited_confidence": 0.0
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 17,
+          "mean_credited_confidence": 0.7390176470588236
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 3,
+          "mean_credited_confidence": 0.09837499999999999
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a0",
+        "escalate_to_human": "e0",
+        "ignore": "i0"
+      },
+      "baseline": true,
+      "mean_credited_confidence": 0.27854,
+      "accuracy": 0.38,
+      "n_correct": 19,
+      "mean_p_correct": 0.40674,
+      "macro_credited_confidence": 0.27433394607843137,
+      "n_correct_above_threshold": 12,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 0,
+          "mean_credited_confidence": 0.0
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 17,
+          "mean_credited_confidence": 0.7589705882352941
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 2,
+          "mean_credited_confidence": 0.06403125
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a2",
+        "escalate_to_human": "e0",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.276708,
+      "accuracy": 0.44,
+      "n_correct": 22,
+      "mean_p_correct": 0.44568399999999997,
+      "macro_credited_confidence": 0.274550612745098,
+      "n_correct_above_threshold": 6,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 2,
+          "mean_credited_confidence": 0.05250588235294118
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 16,
+          "mean_credited_confidence": 0.6044647058823529
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 4,
+          "mean_credited_confidence": 0.16668125
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a0",
+        "escalate_to_human": "e1",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.27454999999999996,
+      "accuracy": 0.52,
+      "n_correct": 26,
+      "mean_p_correct": 0.41259999999999997,
+      "macro_credited_confidence": 0.2734235294117647,
+      "n_correct_above_threshold": 2,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 4,
+          "mean_credited_confidence": 0.10314705882352941
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.5000235294117646
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 7,
+          "mean_credited_confidence": 0.2171
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a4",
+        "escalate_to_human": "e0",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.27063400000000004,
+      "accuracy": 0.38,
+      "n_correct": 19,
+      "mean_p_correct": 0.40614400000000006,
+      "macro_credited_confidence": 0.26646875000000003,
+      "n_correct_above_threshold": 12,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 0,
+          "mean_credited_confidence": 0.0
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 17,
+          "mean_credited_confidence": 0.7412000000000001
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 2,
+          "mean_credited_confidence": 0.05820625
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a7",
+        "escalate_to_human": "e0",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.268524,
+      "accuracy": 0.38,
+      "n_correct": 19,
+      "mean_p_correct": 0.413948,
+      "macro_credited_confidence": 0.26458394607843133,
+      "n_correct_above_threshold": 11,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 0,
+          "mean_credited_confidence": 0.0
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 17,
+          "mean_credited_confidence": 0.726170588235294
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 2,
+          "mean_credited_confidence": 0.06758125000000001
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e9",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.265658,
+      "accuracy": 0.42,
+      "n_correct": 21,
+      "mean_p_correct": 0.39610799999999996,
+      "macro_credited_confidence": 0.2644692401960784,
+      "n_correct_above_threshold": 5,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 0,
+          "mean_credited_confidence": 0.0
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 15,
+          "mean_credited_confidence": 0.5883764705882353
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 6,
+          "mean_credited_confidence": 0.20503125
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a7",
+        "escalate_to_human": "e1",
+        "ignore": "i9"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.261318,
+      "accuracy": 0.54,
+      "n_correct": 27,
+      "mean_p_correct": 0.38601199999999997,
+      "macro_credited_confidence": 0.2580275735294118,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 14,
+          "mean_credited_confidence": 0.387
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 10,
+          "mean_credited_confidence": 0.2935764705882353
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 3,
+          "mean_credited_confidence": 0.09350625
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e4",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.259644,
+      "accuracy": 0.48,
+      "n_correct": 24,
+      "mean_p_correct": 0.39958,
+      "macro_credited_confidence": 0.25917095588235295,
+      "n_correct_above_threshold": 3,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 5,
+          "mean_credited_confidence": 0.11390588235294118
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.42808823529411766
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 6,
+          "mean_credited_confidence": 0.23551875
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a6",
+        "escalate_to_human": "e0",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.25363,
+      "accuracy": 0.38,
+      "n_correct": 19,
+      "mean_p_correct": 0.41442799999999996,
+      "macro_credited_confidence": 0.25003762254901957,
+      "n_correct_above_threshold": 8,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 0,
+          "mean_credited_confidence": 0.0
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 17,
+          "mean_credited_confidence": 0.6796941176470588
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 2,
+          "mean_credited_confidence": 0.07041875
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a9",
+        "escalate_to_human": "e0",
+        "ignore": "i0"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.250132,
+      "accuracy": 0.38,
+      "n_correct": 19,
+      "mean_p_correct": 0.405268,
+      "macro_credited_confidence": 0.24647965686274512,
+      "n_correct_above_threshold": 7,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 0,
+          "mean_credited_confidence": 0.0
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 17,
+          "mean_credited_confidence": 0.6755764705882353
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 2,
+          "mean_credited_confidence": 0.0638625
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e3",
+        "ignore": "i8"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.23532599999999998,
+      "accuracy": 0.48,
+      "n_correct": 24,
+      "mean_p_correct": 0.409236,
+      "macro_credited_confidence": 0.2376044117647059,
+      "n_correct_above_threshold": 0,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 8,
+          "mean_credited_confidence": 0.2142058823529412
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 5,
+          "mean_credited_confidence": 0.14708235294117647
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 11,
+          "mean_credited_confidence": 0.351525
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e1",
+        "ignore": "i1"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.220106,
+      "accuracy": 0.44,
+      "n_correct": 22,
+      "mean_p_correct": 0.38116999999999995,
+      "macro_credited_confidence": 0.22460000000000002,
+      "n_correct_above_threshold": 2,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 0,
+          "mean_credited_confidence": 0.0
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 8,
+          "mean_credited_confidence": 0.2245
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 14,
+          "mean_credited_confidence": 0.44930000000000003
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e1",
+        "ignore": "i4"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.206602,
+      "accuracy": 0.42,
+      "n_correct": 21,
+      "mean_p_correct": 0.386528,
+      "macro_credited_confidence": 0.20900759803921568,
+      "n_correct_above_threshold": 3,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 6,
+          "mean_credited_confidence": 0.14830000000000002
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 5,
+          "mean_credited_confidence": 0.14943529411764706
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 10,
+          "mean_credited_confidence": 0.3292875
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a5",
+        "escalate_to_human": "e1",
+        "ignore": "i8"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.204984,
+      "accuracy": 0.4,
+      "n_correct": 20,
+      "mean_p_correct": 0.38441000000000003,
+      "macro_credited_confidence": 0.20950575980392158,
+      "n_correct_above_threshold": 1,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 0,
+          "mean_credited_confidence": 0.0
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 7,
+          "mean_credited_confidence": 0.19292352941176472
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 13,
+          "mean_credited_confidence": 0.43559375
+        }
+      }
+    },
+    {
+      "ids": {
+        "auto_reply": "a1",
+        "escalate_to_human": "e3",
+        "ignore": "i1"
+      },
+      "baseline": false,
+      "mean_credited_confidence": 0.16298200000000002,
+      "accuracy": 0.34,
+      "n_correct": 17,
+      "mean_p_correct": 0.376768,
+      "macro_credited_confidence": 0.16675980392156864,
+      "n_correct_above_threshold": 0,
+      "by_label": {
+        "auto_reply": {
+          "n": 17,
+          "n_correct": 2,
+          "mean_credited_confidence": 0.05169411764705883
+        },
+        "escalate_to_human": {
+          "n": 17,
+          "n_correct": 3,
+          "mean_credited_confidence": 0.09293529411764705
+        },
+        "ignore": {
+          "n": 16,
+          "n_correct": 12,
+          "mean_credited_confidence": 0.35565
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "authored_by": "Grok 4.7, ahead of the search. tune_criteria.py reads this file and does not generate text.",
+  "notes": "a0, e0, and i0 are the criteria strings currently in laya_demo.py. Each option is kept to a short phrase because Laya truncates an option to 48 tokens. Descriptions are different hypotheses about the boundary, not paraphrases of one sentence.",
+  "variants": {
+    "auto_reply": [
+      {"id": "a0", "text": "The issue is simple and can be addressed automatically."},
+      {"id": "a1", "text": "A how-to or FAQ: password reset, Bluetooth pairing, order tracking, firmware, or account settings."},
+      {"id": "a2", "text": "The customer wants instructions. Nothing is broken, missing, disputed, or unsafe."},
+      {"id": "a3", "text": "A routine question. Not a fault, refund, replacement, or complaint."},
+      {"id": "a4", "text": "A published help article answers it. No investigation and no decision."},
+      {"id": "a5", "text": "How to use the product, the app, or the website."},
+      {"id": "a6", "text": "They ask how to do something and do not report a failure or a charge."},
+      {"id": "a7", "text": "Standard self-service steps will resolve it without a person."},
+      {"id": "a8", "text": "Setup, login, finding an order, or a question about published store policy."},
+      {"id": "a9", "text": "Instructions only. No refund, replacement, cancellation, or security incident."}
+    ],
+    "escalate_to_human": [
+      {"id": "e0", "text": "The hardware issue or replacement request needs a human agent."},
+      {"id": "e1", "text": "A defect, replacement, refund, billing dispute, or damaged delivery."},
+      {"id": "e2", "text": "Something failed, money is at stake, or a human must judge the case."},
+      {"id": "e3", "text": "Broken hardware, a refund, a safety issue, or an account takeover."},
+      {"id": "e4", "text": "A specialist must investigate, decide, or make an exception."},
+      {"id": "e5", "text": "Warranty, return, cancellation, wrong item, or a complaint to resolve."},
+      {"id": "e6", "text": "A physical product problem, a charge error, or an action only staff can take."},
+      {"id": "e7", "text": "Faults, refunds, replacements, missing orders, security, legal, or safety."},
+      {"id": "e8", "text": "A real order or device problem that support staff must handle."},
+      {"id": "e9", "text": "The customer is blocked, out of pocket, or at risk, and a person should take over."}
+    ],
+    "ignore": [
+      {"id": "i0", "text": "The message is spam or completely irrelevant."},
+      {"id": "i1", "text": "Spam, phishing, or a scam, including a fake delivery or account alert."},
+      {"id": "i2", "text": "An unsolicited sales pitch, supplier offer, or partnership request."},
+      {"id": "i3", "text": "Recruitment, a job application, or a message meant for someone else."},
+      {"id": "i4", "text": "Gibberish or an automated notice with no question for support."},
+      {"id": "i5", "text": "Marketing, crypto, selling followers, or a prize promotion."},
+      {"id": "i6", "text": "The sender does not describe a problem with their own order, account, or device."},
+      {"id": "i7", "text": "Cold outreach. Nobody is asking us to fix, explain, or replace something."},
+      {"id": "i8", "text": "Phishing that asks for a password, a payment, or card details."},
+      {"id": "i9", "text": "Not a customer support request."}
+    ]
+  }
+}
