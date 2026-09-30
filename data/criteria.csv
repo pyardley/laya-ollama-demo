@@ -1,0 +1,31 @@
+id,action,text
+a0,auto_reply,The issue is simple and can be addressed automatically.
+a1,auto_reply,"A how-to or FAQ: password reset, Bluetooth pairing, order tracking, firmware, or account settings."
+a2,auto_reply,"The customer wants instructions. Nothing is broken, missing, disputed, or unsafe."
+a3,auto_reply,"A routine question. Not a fault, refund, replacement, or complaint."
+a4,auto_reply,A published help article answers it. No investigation and no decision.
+a5,auto_reply,"How to use the product, the app, or the website."
+a6,auto_reply,They ask how to do something and do not report a failure or a charge.
+a7,auto_reply,Standard self-service steps will resolve it without a person.
+a8,auto_reply,"Setup, login, finding an order, or a question about published store policy."
+a9,auto_reply,"Instructions only. No refund, replacement, cancellation, or security incident."
+e0,escalate_to_human,The hardware issue or replacement request needs a human agent.
+e1,escalate_to_human,"A defect, replacement, refund, billing dispute, or damaged delivery."
+e2,escalate_to_human,"Something failed, money is at stake, or a human must judge the case."
+e3,escalate_to_human,"Broken hardware, a refund, a safety issue, or an account takeover."
+e4,escalate_to_human,"A specialist must investigate, decide, or make an exception."
+e5,escalate_to_human,"Warranty, return, cancellation, wrong item, or a complaint to resolve."
+e6,escalate_to_human,"A physical product problem, a charge error, or an action only staff can take."
+e7,escalate_to_human,"Faults, refunds, replacements, missing orders, security, legal, or safety."
+e8,escalate_to_human,A real order or device problem that support staff must handle.
+e9,escalate_to_human,"The customer is blocked, out of pocket, or at risk, and a person should take over."
+i0,ignore,The message is spam or completely irrelevant.
+i1,ignore,"Spam, phishing, or a scam, including a fake delivery or account alert."
+i2,ignore,"An unsolicited sales pitch, supplier offer, or partnership request."
+i3,ignore,"Recruitment, a job application, or a message meant for someone else."
+i4,ignore,Gibberish or an automated notice with no question for support.
+i5,ignore,"Marketing, crypto, selling followers, or a prize promotion."
+i6,ignore,"The sender does not describe a problem with their own order, account, or device."
+i7,ignore,"Cold outreach. Nobody is asking us to fix, explain, or replace something."
+i8,ignore,"Phishing that asks for a password, a payment, or card details."
+i9,ignore,Not a customer support request.

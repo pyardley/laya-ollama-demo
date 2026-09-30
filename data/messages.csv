@@ -1,0 +1,51 @@
+id,label,text
+m01,auto_reply,How do I reset my password? I can't remember it.
+m02,auto_reply,"This is ridiculous, where is the tracking number on the website? I can't find the page."
+m03,auto_reply,How do I pair the speaker with my phone over Bluetooth?
+m04,auto_reply,Can you tell me how to change the email address on my account?
+m05,auto_reply,"What is your returns window? I'm not sending anything back, I just want the policy."
+m06,auto_reply,How do I update the firmware on the SoundBar 200?
+m07,auto_reply,How do I turn off marketing emails?
+m08,auto_reply,"Does the standard warranty cover accidental drops, or only manufacturing faults? I only want what the policy says."
+m09,auto_reply,Where do I download the iOS app?
+m10,auto_reply,How do I turn off the volume limit in the app? Playback is quieter than I expected.
+m11,auto_reply,How do I add a second user to my household account?
+m12,auto_reply,Which payment methods can I use at checkout?
+m13,auto_reply,Where is the user manual PDF for the Mini Speaker?
+m14,auto_reply,How do I see my past orders once I'm logged in?
+m15,auto_reply,What hours is customer support open?
+m16,auto_reply,How do I switch the speaker from Bluetooth to the aux input?
+m17,auto_reply,How do I rename my speaker in the app?
+m18,escalate_to_human,My speaker crackles when playing audio.
+m19,escalate_to_human,The left earcup on my headphones stopped working after two weeks. I need a replacement.
+m20,escalate_to_human,I was charged twice for order 44921. Please refund the duplicate payment.
+m21,escalate_to_human,The package arrived crushed and the speaker grille is dented.
+m22,escalate_to_human,This unit gets hot and smells like burning plastic. I unplugged it. Please advise urgently.
+m23,escalate_to_human,I want to return this speaker. It cuts out every few minutes and the steps on your help page did not fix it.
+m24,escalate_to_human,Someone changed my password and placed an order I didn't make. Please lock the account.
+m25,escalate_to_human,I've emailed three times about a missing delivery and nobody has replied. This is unacceptable.
+m26,escalate_to_human,Your driver left the parcel in the rain and the box is soaked through. I need a person to sort this out today.
+m27,escalate_to_human,The invoice total is higher than the price I saw at checkout. I need the charge corrected.
+m28,escalate_to_human,I am writing on behalf of a customer who was injured when a wall-mount bracket failed. We need to discuss liability.
+m29,escalate_to_human,"The speaker will not power on at all, even with a different cable. I want a warranty replacement."
+m30,escalate_to_human,"The app says my speaker is registered to an email address that isn't mine, and the proof-of-purchase form was rejected. Can someone call me?"
+m31,escalate_to_human,I ordered black and you sent white. I need the correct unit before Friday's event.
+m32,escalate_to_human,There is a constant hiss even with no music playing. I already tried a different source and cable.
+m33,escalate_to_human,"Please cancel order 88210 and refund me. It has not shipped, and the website will not let me cancel it."
+m34,escalate_to_human,"The battery lasts about twenty minutes, not the ten hours advertised. I would like a refund."
+m35,ignore,"Congratulations, you have been selected for a $1,000 gift card. Click here to claim your prize."
+m36,ignore,We offer SEO and backlink packages that will rank your site on Google. Reply YES for a proposal.
+m37,ignore,Urgent: verify your mailbox password at http://secure-login-reset.example within 24 hours or the account will be closed.
+m38,ignore,"Hello, I am a recent graduate applying for a junior software role. My resume is attached."
+m39,ignore,New meme coin launching tonight. Early wallets get a 40% bonus. Join our Telegram for the contract address.
+m40,ignore,"Buy 10,000 Instagram followers, cheap and instant. Message us on WhatsApp."
+m41,ignore,asdf jjj qqq not a real message 12345 #####
+m42,ignore,"Dear Sir or Madam, our Shenzhen factory can supply Bluetooth speakers at a low price. Minimum order 500 units."
+m43,ignore,You have one unread voice message. Call this premium-rate number to listen to it.
+m44,ignore,This is a reminder of your dentist appointment on Thursday at 2pm. Reply STOP to opt out.
+m45,ignore,Win a free phone. Forward this message to ten friends and enter your card details to qualify.
+m46,ignore,We purchase customer returns and used electronics in bulk. Are you selling your surplus stock?
+m47,ignore,Your parcel is held at customs. Pay the release fee at the link below or it will be returned to the sender.
+m48,ignore,Enjoyed your last article. I can write a guest post for you if you will link to my casino review site.
+m49,ignore,Automatic reply: I am out of the office until 12 October and will read email when I return.
+m50,ignore,"Hi there, I would love to book 15 minutes this week to talk about a partnership and cross-promotion idea."
