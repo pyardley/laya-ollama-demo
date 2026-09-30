@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "fitted_on": "data/customer_messages.json",
+  "n_messages": 50,
+  "development_fingerprint": "02f8884ee6eb09c761a09bd4b5fd51a8413c309f08c62c58379014478cfabb83",
+  "do_not_refit": true,
+  "model_id": "convaiinnovations/laya",
+  "laya_version": "0.3.20",
+  "device": "cpu",
+  "inference_mode": "as_loaded",
+  "repeat_identical": true,
+  "published_baseline": {
+    "compared": true,
+    "choice_matches": true,
+    "probability_matches": true,
+    "n_choice_mismatches": 0,
+    "n_probability_mismatches": 0,
+    "choice_mismatch_ids": [],
+    "probability_mismatch_ids": []
+  },
+  "cost_matrix": {
+    "auto_reply": {
+      "auto_reply": 0,
+      "escalate_to_human": 1,
+      "ignore": 2
+    },
+    "escalate_to_human": {
+      "auto_reply": 1,
+      "escalate_to_human": 0,
+      "ignore": 3
+    },
+    "ignore": {
+      "auto_reply": 2,
+      "escalate_to_human": 1,
+      "ignore": 0
+    }
+  },
+  "cost_matrix_path": "data/cost_matrix.csv",
+  "questions": {
+    "demo": {
+      "type": "choice",
+      "instruction": "What action should be taken for this customer support ticket?",
+      "criteria": {
+        "auto_reply": "A how-to or FAQ: password reset, Bluetooth pairing, order tracking, firmware, or account settings.",
+        "escalate_to_human": "Broken hardware, a refund, a safety issue, or an account takeover.",
+        "ignore": "Not a customer support request."
+      }
+    },
+    "ownership": {
+      "type": "choice",
+      "instruction": "Who is writing, relative to this shop?",
+      "criteria": {
+        "customer": "A person writing about their own order, account, or device.",
+        "outsider": "Spam, a pitch, recruitment, or someone else's notice.",
+        "unclear": "Not enough to tell whether the sender is a customer."
+      }
+    },
+    "need": {
+      "type": "choice",
+      "instruction": "What kind of help does the sender need?",
+      "criteria": {
+        "steps": "Steps, or the wording of a published policy. Nothing has failed.",
+        "staff": "A fault, a refund, a cancellation, a replacement, or an unsafe account.",
+        "none": "No help with their own order, account, or device."
+      }
+    }
+  },
+  "token_audit": [
+    {
+      "id": "demo",
+      "instruction": "What action should be taken for this customer support ticket?",
+      "instruction_tokens": 14,
+      "instruction_tokens_kept": 14,
+      "instruction_truncated": false,
+      "options": [
+        {
+          "label": "auto_reply",
+          "tokens": 26,
+          "cap": 48,
+          "truncated": false,
+          "text": "A how-to or FAQ: password reset, Bluetooth pairing, order tracking, firmware, or account settings."
+        },
+        {
+          "label": "escalate_to_human",
+          "tokens": 23,
+          "cap": 48,
+          "truncated": false,
+          "text": "Broken hardware, a refund, a safety issue, or an account takeover."
+        },
+        {
+          "label": "ignore",
+          "tokens": 8,
+          "cap": 48,
+          "truncated": false,
+          "text": "Not a customer support request."
+        }
+      ],
+      "packed_option_tokens_including_mask": 60,
+      "head_token_cap": 192,
+      "tokens_left_for_instruction": 132,
+      "head_would_cut_options": false,
+      "within_limits": true
+    },
+    {
+      "id": "ownership",
+      "instruction": "Who is writing, relative to this shop?",
+      "instruction_tokens": 12,
+      "instruction_tokens_kept": 12,
+      "instruction_truncated": false,
+      "options": [
+        {
+          "label": "customer",
+          "tokens": 15,
+          "cap": 48,
+          "truncated": false,
+          "text": "A person writing about their own order, account, or device."
+        },
+        {
+          "label": "outsider",
+          "tokens": 17,
+          "cap": 48,
+          "truncated": false,
+          "text": "Spam, a pitch, recruitment, or someone else's notice."
+        },
+        {
+          "label": "unclear",
+          "tokens": 13,
+          "cap": 48,
+          "truncated": false,
+          "text": "Not enough to tell whether the sender is a customer."
+        }
+      ],
+      "packed_option_tokens_including_mask": 48,
+      "head_token_cap": 192,
+      "tokens_left_for_instruction": 144,
+      "head_would_cut_options": false,
+      "within_limits": true
+    },
+    {
+      "id": "need",
+      "instruction": "What kind of help does the sender need?",
+      "instruction_tokens": 12,
+      "instruction_tokens_kept": 12,
+      "instruction_truncated": false,
+      "options": [
+        {
+          "label": "steps",
+          "tokens": 16,
+          "cap": 48,
+          "truncated": false,
+          "text": "Steps, or the wording of a published policy. Nothing has failed."
+        },
+        {
+          "label": "staff",
+          "tokens": 19,
+          "cap": 48,
+          "truncated": false,
+          "text": "A fault, a refund, a cancellation, a replacement, or an unsafe account."
+        },
+        {
+          "label": "none",
+          "tokens": 14,
+          "cap": 48,
+          "truncated": false,
+          "text": "No help with their own order, account, or device."
+        }
+      ],
+      "packed_option_tokens_including_mask": 52,
+      "head_token_cap": 192,
+      "tokens_left_for_instruction": 140,
+      "head_would_cut_options": false,
+      "within_limits": true
+    }
+  ],
+  "repair_thresholds": {
+    "t_own": 0.6,
+    "t_need": 1.01,
+    "resubstitution_cost": 17,
+    "grid": "0.00 to 1.00 step 0.05, plus 1.01 meaning do not fire",
+    "tie_break": "lowest cost, then higher t_own, then higher t_need",
+    "fit_on": "all 50 development messages"
+  },
+  "winner": "baseline_argmax",
+  "winner_comparison_cost": 19,
+  "winner_selection": "Lowest development cost. Tuned repair_thresholds is ranked on its leave-one-out cost, not on the cost of the frozen thresholds reapplied to the same 50. Ties prefer an untuned rule, then fewer Laya calls.",
+  "strategies": {
+    "baseline_argmax": {
+      "tuned": false,
+      "comparison_cost": 19,
+      "total_cost": 19,
+      "frozen_cost": 19,
+      "loo_cost": null,
+      "n_correct": 41,
+      "accuracy": 0.82,
+      "n_laya_calls": 50,
+      "n_flips_vs_baseline": 0,
+      "cost_delta_vs_baseline": 0,
+      "settings": {
+        "question": "demo",
+        "wording": "a1 / e3 / i9",
+        "rule": "highest probability",
+        "temperature": "shipped"
+      }
+    },
+    "repeated_majority": {
+      "tuned": false,
+      "comparison_cost": 19,
+      "total_cost": 19,
+      "frozen_cost": 19,
+      "loo_cost": null,
+      "n_correct": 41,
+      "accuracy": 0.82,
+      "n_laya_calls": 100,
+      "n_flips_vs_baseline": 0,
+      "cost_delta_vs_baseline": 0,
+      "settings": {
+        "question": "demo, called twice",
+        "n_samples": 2,
+        "temperature": "shipped",
+        "identical_outputs": true
+      }
+    },
+    "specialist_route": {
+      "tuned": false,
+      "comparison_cost": 85,
+      "total_cost": 85,
+      "frozen_cost": 85,
+      "loo_cost": null,
+      "n_correct": 16,
+      "accuracy": 0.32,
+      "n_laya_calls": 100,
+      "n_flips_vs_baseline": 33,
+      "cost_delta_vs_baseline": 66,
+      "settings": {
+        "questions": [
+          "ownership",
+          "need",
+          "demo as fallback"
+        ],
+        "rule": "fixed map from who-is-writing and what-help-is-needed; demo only when that map abstains"
+      }
+    },
+    "mapped_majority": {
+      "tuned": false,
+      "comparison_cost": 45,
+      "total_cost": 45,
+      "frozen_cost": 45,
+      "loo_cost": null,
+      "n_correct": 30,
+      "accuracy": 0.6,
+      "n_laya_calls": 150,
+      "n_flips_vs_baseline": 15,
+      "cost_delta_vs_baseline": 26,
+      "settings": {
+        "questions": [
+          "demo",
+          "ownership",
+          "need"
+        ],
+        "rule": "majority of demo plus specialist votes; a tie that includes the demo keeps the demo"
+      }
+    },
+    "costly_miss_repair": {
+      "tuned": false,
+      "comparison_cost": 37,
+      "total_cost": 37,
+      "frozen_cost": 37,
+      "loo_cost": null,
+      "n_correct": 32,
+      "accuracy": 0.64,
+      "n_laya_calls": 101,
+      "n_flips_vs_baseline": 11,
+      "cost_delta_vs_baseline": 18,
+      "settings": {
+        "questions": [
+          "demo",
+          "ownership",
+          "need"
+        ],
+        "t_own": 0.0,
+        "t_need": 0.0,
+        "rule": "flip only ignore->escalate or auto_reply->ignore, and only when the specialist choices say so"
+      }
+    },
+    "repair_thresholds": {
+      "tuned": true,
+      "comparison_cost": 19,
+      "total_cost": 17,
+      "frozen_cost": 17,
+      "loo_cost": 19,
+      "n_correct": 42,
+      "accuracy": 0.84,
+      "n_laya_calls": 101,
+      "n_flips_vs_baseline": 1,
+      "cost_delta_vs_baseline": -2,
+      "settings": {
+        "questions": [
+          "demo",
+          "ownership",
+          "need"
+        ],
+        "t_own": 0.6,
+        "t_need": 1.01,
+        "grid": "0.00 to 1.00 step 0.05, plus 1.01 meaning do not fire",
+        "fit": "minimise total cost on all development messages; ties take the higher thresholds",
+        "loo_n_correct": 41,
+        "loo_confusion": {
+          "auto_reply": {
+            "auto_reply": 14,
+            "escalate_to_human": 2,
+            "ignore": 1
+          },
+          "escalate_to_human": {
+            "auto_reply": 0,
+            "escalate_to_human": 14,
+            "ignore": 3
+          },
+          "ignore": {
+            "auto_reply": 3,
+            "escalate_to_human": 0,
+            "ignore": 13
+          }
+        },
+        "loo_threshold_counts": {
+          "0.60/1.01": 49,
+          "1.01/1.01": 1
+        }
+      }
+    }
+  }
+}
