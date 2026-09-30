@@ -23,7 +23,7 @@ The write-up already measured the following. They were not run again as searches
 | (c) Average the probabilities of the nearest strong wordings | Stayed at 40–41/50 with the same nine misses. Those wordings disagree on messages the winner already gets right. | Averaging nearby paraphrases of the same route question does not move the misses. Not run again. |
 | (d) A second 3-way question on messages already sent to `auto_reply`, and a re-check of `ignore` | 40/50, 36/50, and 39/50. The second question asked for the same three actions in different words. | A follow-up has to do a different job. The specialist questions below are that attempt. The old second pass was not copied. |
 | (e) Lowest expected cost, treating the three probabilities as class chances | 26/50, cost 25. Probabilities sit around 0.3–0.5, so escalation wins the close calls. | Recomputed on this run’s demo probabilities as a control, not as a new rule. Same result: cost 25, 26/50. No extra Laya call. |
-| (f) A 70% confidence gate | Correct calls sit around 0.51–0.58, so the gate blocks almost everything. | Recomputed on this run as a control. Cost 33, 17/50, and every message is escalated. One of the 50 clears 70%, and the gate still escalates it because the other 49 do not. No extra Laya call. |
+| (f) A 70% confidence gate | Correct calls sit around 0.51–0.58, so the gate blocks almost everything. The post does not give a cost for the gate. | Recomputed by our code as a control, not taken from the post: cost 33, 17/50, and every message is escalated. The one message that clears 70% (`m26`) was already an escalation. No extra Laya call. |
 
 ## How to run
 
@@ -59,7 +59,7 @@ Token counts use the checkpoint tokenizer, with the same rendering as Laya (`lab
 
 `demo` is the instruction and the three sentences in `laya_demo.py`. `ownership` and `need` are not a second copy of those three route labels. Their sentences follow the labelling policy in `data/customer_messages.json`. They do not quote the nine missed messages. The exact strings are in `experiments/questions.py` and are copied into `experiments/config.json` so a later edit of the script cannot change a held-out run.
 
-Settings shared by every live call: model `convaiinnovations/laya`, `laya` 0.3.20, device `cpu`, shipped temperature (not overridden), batch size 4. After load, `model.training` was already `False`.
+Settings shared by every live call: model `convaiinnovations/laya`, `laya` 0.3.20, device `cpu`, shipped temperature (not overridden), batch size 8. After load, `model.training` was already `False`.
 
 ## Development results
 
@@ -101,7 +101,7 @@ Controls on the same probabilities, same 50 calls, not candidates:
 | Expected cost | 25 | 26/50 | auto_reply 7/10/0; escalate 0/17/0; ignore 1/13/2 |
 | 70% gate, else the top probability | 33 | 17/50 | auto_reply 0/17/0; escalate 0/17/0; ignore 0/16/0 |
 
-Both match the write-up. Expected cost fixes the three dropped cases by escalating almost every close call. The 70% gate sends every message to a human. The one score that clears 70% is `m26`, already an escalation at 0.8525, so the gate never opens another route.
+Expected cost matches the write-up (cost 25, 26/50): it fixes the three dropped cases by escalating almost every close call. The 70% gate’s cost of 33 is reproduced by our code; the post does not give that figure. The gate sends every message to a human. The one score that clears 70% is `m26`, already an escalation at 0.8525, so the gate never opens another route.
 
 ### 2. Repeated majority
 
@@ -160,7 +160,7 @@ The demo choice stands unless a specialist flags one of the two expensive patter
 
 Same flips as strategy 5, but each specialist has to clear a confidence threshold. The grid is 0.00 to 1.00 in steps of 0.05, plus 1.01, which cannot fire because `answer_confidence` is at most 1. The fit minimises total cost on all 50. Ties take the higher thresholds, so the rule stays quiet unless firing actually helps.
 
-Fit on all 50: `t_own = 0.60`, `t_need = 1.01`. The need-threshold is the off switch. That is forced by the data: `need` is `none` everywhere, so no value of `t_need` changes a decision, and the tie-break picks the highest one.
+Fit on all 50: `t_own = 0.60`, `t_need = 1.01`. `t_need` had no effect, because the need question answered `none` on all 50 messages, so no value of `t_need` changes a decision. The tie-break then picks the highest threshold, 1.01.
 
 Reapplied to the same 50, the frozen rule changes one message. `m37` (true label `ignore`, demo `auto_reply` at 0.4765) has ownership `outsider` at 0.6454, which clears 0.60. The prediction becomes `ignore`. Cost goes from 2 to 0. No other message moves. Frozen cost 17. Frozen accuracy 42/50. Calls: 101.
 
