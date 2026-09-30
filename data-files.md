@@ -1,6 +1,6 @@
 # Data files
 
-What each labelled-ticket file contains, and what the two Laya result files contain. The wordings were written before any search. The scores were produced later by `noul_matrix.py` and `noul_correlation.py` with `convaiinnovations/laya` on CPU.
+What each file in `data/` contains, and what the two Laya result files contain. The wordings were written before any search. The scores were produced later by `noul_matrix.py` and `noul_correlation.py` with `convaiinnovations/laya` on CPU. The cost matrix is the one `rated_score.py` uses.
 
 Wording ids run `a0`–`a9` (auto_reply), `e0`–`e9` (escalate_to_human), and `i0`–`i9` (ignore). Message ids run `m01`–`m50`.
 
@@ -31,6 +31,18 @@ The fifty messages as one row each. Header: `id`, `label`, `text`. Same ids, lab
 ## `data/criteria.csv`
 
 The thirty wordings as one row each. Header: `id`, `action`, `text`. Order is `a0`–`a9`, then `e0`–`e9`, then `i0`–`i9`. Same ids, actions, and text as `criteria_variants.json`. The notes are not in this file.
+
+## `data/cost_matrix.csv`
+
+The cost of each mistake, as used by `rated_score.py`. Three rows. The first column is `true_label`. The header columns are the action taken: `auto_reply`, `escalate_to_human`, `ignore`. A cell is the cost of taking that action when the row's label is the true one. Lower is better. The diagonal is 0.
+
+| True label | auto_reply | escalate_to_human | ignore |
+| --- | ---: | ---: | ---: |
+| auto_reply | 0 | 1 | 2 |
+| escalate_to_human | 1 | 0 | 3 |
+| ignore | 2 | 1 | 0 |
+
+Ignoring a real case costs 3. An automatic reply on that same case costs 1, because the customer still gets an answer. Escalating a how-to or a non-ticket costs 1. An automatic reply to a non-ticket costs 2. `rated_score.py` treats Laya's probabilities as the chance each label is true and picks the action with the lowest expected cost.
 
 ## `noul_matrix.json`
 
