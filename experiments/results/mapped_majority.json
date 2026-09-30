@@ -1,0 +1,542 @@
+{
+  "strategy": "mapped_majority",
+  "total_cost": 45,
+  "frozen_cost": 45,
+  "loo_cost": null,
+  "n_correct": 30,
+  "n_messages": 50,
+  "accuracy": 0.6,
+  "n_laya_calls": 150,
+  "confusion": {
+    "auto_reply": {
+      "auto_reply": 4,
+      "escalate_to_human": 0,
+      "ignore": 13
+    },
+    "escalate_to_human": {
+      "auto_reply": 0,
+      "escalate_to_human": 12,
+      "ignore": 5
+    },
+    "ignore": {
+      "auto_reply": 2,
+      "escalate_to_human": 0,
+      "ignore": 14
+    }
+  },
+  "per_message": [
+    {
+      "id": "m01",
+      "label": "auto_reply",
+      "prediction": "ignore",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": true
+    },
+    {
+      "id": "m02",
+      "label": "auto_reply",
+      "prediction": "ignore",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": true
+    },
+    {
+      "id": "m03",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m04",
+      "label": "auto_reply",
+      "prediction": "ignore",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": true
+    },
+    {
+      "id": "m05",
+      "label": "auto_reply",
+      "prediction": "ignore",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m06",
+      "label": "auto_reply",
+      "prediction": "ignore",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": true
+    },
+    {
+      "id": "m07",
+      "label": "auto_reply",
+      "prediction": "ignore",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": true
+    },
+    {
+      "id": "m08",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m09",
+      "label": "auto_reply",
+      "prediction": "ignore",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": true
+    },
+    {
+      "id": "m10",
+      "label": "auto_reply",
+      "prediction": "ignore",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": true
+    },
+    {
+      "id": "m11",
+      "label": "auto_reply",
+      "prediction": "ignore",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": true
+    },
+    {
+      "id": "m12",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m13",
+      "label": "auto_reply",
+      "prediction": "ignore",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": true
+    },
+    {
+      "id": "m14",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m15",
+      "label": "auto_reply",
+      "prediction": "ignore",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": true
+    },
+    {
+      "id": "m16",
+      "label": "auto_reply",
+      "prediction": "ignore",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": true
+    },
+    {
+      "id": "m17",
+      "label": "auto_reply",
+      "prediction": "ignore",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": true
+    },
+    {
+      "id": "m18",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m19",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m20",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m21",
+      "label": "escalate_to_human",
+      "prediction": "ignore",
+      "cost": 3,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": true
+    },
+    {
+      "id": "m22",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m23",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m24",
+      "label": "escalate_to_human",
+      "prediction": "ignore",
+      "cost": 3,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m25",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m26",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m27",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m28",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m29",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m30",
+      "label": "escalate_to_human",
+      "prediction": "ignore",
+      "cost": 3,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": true
+    },
+    {
+      "id": "m31",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m32",
+      "label": "escalate_to_human",
+      "prediction": "ignore",
+      "cost": 3,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m33",
+      "label": "escalate_to_human",
+      "prediction": "ignore",
+      "cost": 3,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m34",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m35",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m36",
+      "label": "ignore",
+      "prediction": "auto_reply",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m37",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": true
+    },
+    {
+      "id": "m38",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m39",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m40",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m41",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m42",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m43",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m44",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m45",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m46",
+      "label": "ignore",
+      "prediction": "auto_reply",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 3,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m47",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m48",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m49",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m50",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 3,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    }
+  ],
+  "tuned": false,
+  "settings": {
+    "questions": [
+      "demo",
+      "ownership",
+      "need"
+    ],
+    "rule": "majority of demo plus specialist votes; a tie that includes the demo keeps the demo"
+  },
+  "calls_note": "Three Laya calls on every message.",
+  "comparison_cost": 45,
+  "n_flips_vs_baseline": 15,
+  "cost_delta_vs_baseline": 26
+}
