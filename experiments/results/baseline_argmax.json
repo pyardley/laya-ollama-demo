@@ -1,0 +1,1394 @@
+{
+  "strategy": "baseline_argmax",
+  "total_cost": 19,
+  "frozen_cost": 19,
+  "loo_cost": null,
+  "n_correct": 41,
+  "n_messages": 50,
+  "accuracy": 0.82,
+  "n_laya_calls": 50,
+  "confusion": {
+    "auto_reply": {
+      "auto_reply": 14,
+      "escalate_to_human": 2,
+      "ignore": 1
+    },
+    "escalate_to_human": {
+      "auto_reply": 0,
+      "escalate_to_human": 14,
+      "ignore": 3
+    },
+    "ignore": {
+      "auto_reply": 3,
+      "escalate_to_human": 0,
+      "ignore": 13
+    }
+  },
+  "per_message": [
+    {
+      "id": "m01",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m02",
+      "label": "auto_reply",
+      "prediction": "escalate_to_human",
+      "cost": 1,
+      "correct": false,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m03",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m04",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m05",
+      "label": "auto_reply",
+      "prediction": "ignore",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m06",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m07",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m08",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m09",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m10",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m11",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m12",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m13",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m14",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m15",
+      "label": "auto_reply",
+      "prediction": "escalate_to_human",
+      "cost": 1,
+      "correct": false,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m16",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m17",
+      "label": "auto_reply",
+      "prediction": "auto_reply",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m18",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m19",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m20",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m21",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m22",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m23",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m24",
+      "label": "escalate_to_human",
+      "prediction": "ignore",
+      "cost": 3,
+      "correct": false,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m25",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m26",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m27",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m28",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m29",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m30",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m31",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m32",
+      "label": "escalate_to_human",
+      "prediction": "ignore",
+      "cost": 3,
+      "correct": false,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m33",
+      "label": "escalate_to_human",
+      "prediction": "ignore",
+      "cost": 3,
+      "correct": false,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m34",
+      "label": "escalate_to_human",
+      "prediction": "escalate_to_human",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "escalate_to_human",
+      "flipped": false
+    },
+    {
+      "id": "m35",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m36",
+      "label": "ignore",
+      "prediction": "auto_reply",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m37",
+      "label": "ignore",
+      "prediction": "auto_reply",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m38",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m39",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m40",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m41",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m42",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m43",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m44",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m45",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m46",
+      "label": "ignore",
+      "prediction": "auto_reply",
+      "cost": 2,
+      "correct": false,
+      "laya_calls": 1,
+      "baseline_prediction": "auto_reply",
+      "flipped": false
+    },
+    {
+      "id": "m47",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m48",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m49",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    },
+    {
+      "id": "m50",
+      "label": "ignore",
+      "prediction": "ignore",
+      "cost": 0,
+      "correct": true,
+      "laya_calls": 1,
+      "baseline_prediction": "ignore",
+      "flipped": false
+    }
+  ],
+  "tuned": false,
+  "settings": {
+    "question": "demo",
+    "wording": "a1 / e3 / i9",
+    "rule": "highest probability",
+    "temperature": "shipped"
+  },
+  "calls_note": "One Laya call per message: the tuned 3-option wording.",
+  "controls": {
+    "confidence_gate_0.70": {
+      "n_messages": 50,
+      "n_correct": 17,
+      "accuracy": 0.34,
+      "total_cost": 33,
+      "n_laya_calls": 50,
+      "confusion": {
+        "auto_reply": {
+          "auto_reply": 0,
+          "escalate_to_human": 17,
+          "ignore": 0
+        },
+        "escalate_to_human": {
+          "auto_reply": 0,
+          "escalate_to_human": 17,
+          "ignore": 0
+        },
+        "ignore": {
+          "auto_reply": 0,
+          "escalate_to_human": 16,
+          "ignore": 0
+        }
+      },
+      "per_message": [
+        {
+          "id": "m01",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m02",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m03",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m04",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m05",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m06",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m07",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m08",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m09",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m10",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m11",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m12",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m13",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m14",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m15",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m16",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m17",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m18",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m19",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m20",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m21",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m22",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m23",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m24",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m25",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m26",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m27",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m28",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m29",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m30",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m31",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m32",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m33",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m34",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m35",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m36",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m37",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m38",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m39",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m40",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m41",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m42",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m43",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m44",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m45",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m46",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m47",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m48",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m49",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m50",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        }
+      ]
+    },
+    "expected_cost": {
+      "n_messages": 50,
+      "n_correct": 26,
+      "accuracy": 0.52,
+      "total_cost": 25,
+      "n_laya_calls": 50,
+      "confusion": {
+        "auto_reply": {
+          "auto_reply": 7,
+          "escalate_to_human": 10,
+          "ignore": 0
+        },
+        "escalate_to_human": {
+          "auto_reply": 0,
+          "escalate_to_human": 17,
+          "ignore": 0
+        },
+        "ignore": {
+          "auto_reply": 1,
+          "escalate_to_human": 13,
+          "ignore": 2
+        }
+      },
+      "per_message": [
+        {
+          "id": "m01",
+          "label": "auto_reply",
+          "prediction": "auto_reply",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m02",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m03",
+          "label": "auto_reply",
+          "prediction": "auto_reply",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m04",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m05",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m06",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m07",
+          "label": "auto_reply",
+          "prediction": "auto_reply",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m08",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m09",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m10",
+          "label": "auto_reply",
+          "prediction": "auto_reply",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m11",
+          "label": "auto_reply",
+          "prediction": "auto_reply",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m12",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m13",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m14",
+          "label": "auto_reply",
+          "prediction": "auto_reply",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m15",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m16",
+          "label": "auto_reply",
+          "prediction": "auto_reply",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m17",
+          "label": "auto_reply",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m18",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m19",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m20",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m21",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m22",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m23",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m24",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m25",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m26",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m27",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m28",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m29",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m30",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m31",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m32",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m33",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m34",
+          "label": "escalate_to_human",
+          "prediction": "escalate_to_human",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m35",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m36",
+          "label": "ignore",
+          "prediction": "auto_reply",
+          "cost": 2,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m37",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m38",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m39",
+          "label": "ignore",
+          "prediction": "ignore",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m40",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m41",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m42",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m43",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m44",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m45",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m46",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m47",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m48",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        },
+        {
+          "id": "m49",
+          "label": "ignore",
+          "prediction": "ignore",
+          "cost": 0,
+          "correct": true,
+          "laya_calls": 1
+        },
+        {
+          "id": "m50",
+          "label": "ignore",
+          "prediction": "escalate_to_human",
+          "cost": 1,
+          "correct": false,
+          "laya_calls": 1
+        }
+      ]
+    }
+  },
+  "comparison_cost": 19,
+  "n_flips_vs_baseline": 0,
+  "cost_delta_vs_baseline": 0
+}
