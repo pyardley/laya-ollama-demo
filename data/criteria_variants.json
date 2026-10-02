@@ -1,42 +1,162 @@
 {
   "authored_by": "Grok 4.7, ahead of the search. tune_criteria.py reads this file and does not generate text.",
-  "notes": "a0, e0, and i0 are the criteria strings currently in laya_demo.py. Each option is kept to a short phrase because Laya truncates an option to 48 tokens. Descriptions are different hypotheses about the boundary, not paraphrases of one sentence.",
+  "notes": "text is the noul wording. Laya keeps 48 tokens of a rendered option. A noul true option is 'true: ' plus this sentence, and that prefix is 3 tokens, so each text is written to fill the rest: ' true: ' plus text measures 45 to 48 tokens and is not cut. backup is the original short sentence, kept because a choice option spends part of the same 48 tokens on the action label. The thirty sentences are still different hypotheses about the boundary. laya_demo.py still uses the short a1, e3, and i9 lines. noul_matrix.csv and noul_matrix.json were rescored from text. noul_matrix.backup.csv and noul_matrix.backup.json keep the short-wording scores. tune_criteria.py reads text, so a choice search would truncate these longer sentences.",
   "variants": {
     "auto_reply": [
-      {"id": "a0", "text": "The issue is simple and can be addressed automatically."},
-      {"id": "a1", "text": "A how-to or FAQ: password reset, Bluetooth pairing, order tracking, firmware, or account settings."},
-      {"id": "a2", "text": "The customer wants instructions. Nothing is broken, missing, disputed, or unsafe."},
-      {"id": "a3", "text": "A routine question. Not a fault, refund, replacement, or complaint."},
-      {"id": "a4", "text": "A published help article answers it. No investigation and no decision."},
-      {"id": "a5", "text": "How to use the product, the app, or the website."},
-      {"id": "a6", "text": "They ask how to do something and do not report a failure or a charge."},
-      {"id": "a7", "text": "Standard self-service steps will resolve it without a person."},
-      {"id": "a8", "text": "Setup, login, finding an order, or a question about published store policy."},
-      {"id": "a9", "text": "Instructions only. No refund, replacement, cancellation, or security incident."}
+      {
+        "id": "a0",
+        "text": "The issue is simple and can be addressed automatically: a password reset, a settings toggle, a manual, or where to find a page. No product has failed and no money has to be moved. No agent opens it.",
+        "backup": "The issue is simple and can be addressed automatically."
+      },
+      {
+        "id": "a1",
+        "text": "A how-to or FAQ: password reset, Bluetooth pairing, order tracking, firmware, or account settings. Also the app download, volume limit, payment methods, support hours, or a published policy. Nothing is broken.",
+        "backup": "A how-to or FAQ: password reset, Bluetooth pairing, order tracking, firmware, or account settings."
+      },
+      {
+        "id": "a2",
+        "text": "The customer wants instructions. Nothing is broken, missing, disputed, or unsafe. They ask how to pair, log in, find an order, change an email, or follow a published step. No money is asked for.",
+        "backup": "The customer wants instructions. Nothing is broken, missing, disputed, or unsafe."
+      },
+      {
+        "id": "a3",
+        "text": "A routine question. Not a fault, refund, replacement, or complaint. They want a fact from the help pages: hours, payment methods, a manual, or how a setting works. Nobody decides a case.",
+        "backup": "A routine question. Not a fault, refund, replacement, or complaint."
+      },
+      {
+        "id": "a4",
+        "text": "A published help article answers it. No investigation and no decision. The reply is a link or the steps already on the site, not a judgement about a charge, a return, or a broken unit. Staff stay out.",
+        "backup": "A published help article answers it. No investigation and no decision."
+      },
+      {
+        "id": "a5",
+        "text": "How to use the product, the app, or the website: pairing, firmware, renaming a speaker, switching to aux, finding past orders, or turning marketing email off. They are not reporting a fault.",
+        "backup": "How to use the product, the app, or the website."
+      },
+      {
+        "id": "a6",
+        "text": "They ask how to do something and do not report a failure or a charge. The message is a procedure question, not a defect, a duplicate payment, a missing parcel, or a safety report. A help page is enough.",
+        "backup": "They ask how to do something and do not report a failure or a charge."
+      },
+      {
+        "id": "a7",
+        "text": "Standard self-service steps will resolve it without a person. The customer can finish it from the site or the app: login, pairing, a download, a household user, or a published policy. No exception is required.",
+        "backup": "Standard self-service steps will resolve it without a person."
+      },
+      {
+        "id": "a8",
+        "text": "Setup, login, finding an order, or a question about published store policy, such as the returns window or what the warranty document says, with no claim being filed. They are not asking us to act on an order.",
+        "backup": "Setup, login, finding an order, or a question about published store policy."
+      },
+      {
+        "id": "a9",
+        "text": "Instructions only. No refund, replacement, cancellation, or security incident. They want steps, not a person to move money, swap a unit, stop an order, or lock an account. A page covers it.",
+        "backup": "Instructions only. No refund, replacement, cancellation, or security incident."
+      }
     ],
     "escalate_to_human": [
-      {"id": "e0", "text": "The hardware issue or replacement request needs a human agent."},
-      {"id": "e1", "text": "A defect, replacement, refund, billing dispute, or damaged delivery."},
-      {"id": "e2", "text": "Something failed, money is at stake, or a human must judge the case."},
-      {"id": "e3", "text": "Broken hardware, a refund, a safety issue, or an account takeover."},
-      {"id": "e4", "text": "A specialist must investigate, decide, or make an exception."},
-      {"id": "e5", "text": "Warranty, return, cancellation, wrong item, or a complaint to resolve."},
-      {"id": "e6", "text": "A physical product problem, a charge error, or an action only staff can take."},
-      {"id": "e7", "text": "Faults, refunds, replacements, missing orders, security, legal, or safety."},
-      {"id": "e8", "text": "A real order or device problem that support staff must handle."},
-      {"id": "e9", "text": "The customer is blocked, out of pocket, or at risk, and a person should take over."}
+      {
+        "id": "e0",
+        "text": "The hardware issue or replacement request needs a human agent: a crackle, a dead earcup, a unit that will not power on, or a warranty swap only staff can authorise. A help article cannot send the unit.",
+        "backup": "The hardware issue or replacement request needs a human agent."
+      },
+      {
+        "id": "e1",
+        "text": "A defect, replacement, refund, billing dispute, or damaged delivery. The product failed, the charge is wrong, or the parcel arrived crushed, dented, or soaked. A person has to put it right. Staff act.",
+        "backup": "A defect, replacement, refund, billing dispute, or damaged delivery."
+      },
+      {
+        "id": "e2",
+        "text": "Something failed, money is at stake, or a human must judge the case: a double charge, a refund after the help steps failed, or a dispute the site cannot close. The help pages are not enough. Staff judge.",
+        "backup": "Something failed, money is at stake, or a human must judge the case."
+      },
+      {
+        "id": "e3",
+        "text": "Broken hardware, a refund, a safety issue, or an account takeover. Heat, a burning smell, a failed mount, or a password changed and an order the customer did not place. A person must take the case.",
+        "backup": "Broken hardware, a refund, a safety issue, or an account takeover."
+      },
+      {
+        "id": "e4",
+        "text": "A specialist must investigate, decide, or make an exception. The website already blocked the action, the form was rejected, or the case needs a call rather than a help article. A published page cannot settle it. Staff must.",
+        "backup": "A specialist must investigate, decide, or make an exception."
+      },
+      {
+        "id": "e5",
+        "text": "Warranty, return, cancellation, wrong item, or a complaint to resolve. They want the order stopped, the colour corrected, or a person to answer after earlier emails went unanswered. Not a how-to.",
+        "backup": "Warranty, return, cancellation, wrong item, or a complaint to resolve."
+      },
+      {
+        "id": "e6",
+        "text": "A physical product problem, a charge error, or an action only staff can take, such as a refund, a cancellation the site refused, or a replacement before a deadline. The customer cannot finish it alone. Staff must act.",
+        "backup": "A physical product problem, a charge error, or an action only staff can take."
+      },
+      {
+        "id": "e7",
+        "text": "Faults, refunds, replacements, missing orders, security, legal, or safety. A hiss, a short battery, a missing delivery, a lock on a taken-over account, or a liability report.",
+        "backup": "Faults, refunds, replacements, missing orders, security, legal, or safety."
+      },
+      {
+        "id": "e8",
+        "text": "A real order or device problem that support staff must handle: the wrong unit, a soaked parcel, an invoice above the checkout price, or a speaker registered to someone else's email. A help page cannot close it.",
+        "backup": "A real order or device problem that support staff must handle."
+      },
+      {
+        "id": "e9",
+        "text": "The customer is blocked, out of pocket, or at risk, and a person should take over. They cannot cancel, they were charged twice, or the device is hot and they have unplugged it. No bot.",
+        "backup": "The customer is blocked, out of pocket, or at risk, and a person should take over."
+      }
     ],
     "ignore": [
-      {"id": "i0", "text": "The message is spam or completely irrelevant."},
-      {"id": "i1", "text": "Spam, phishing, or a scam, including a fake delivery or account alert."},
-      {"id": "i2", "text": "An unsolicited sales pitch, supplier offer, or partnership request."},
-      {"id": "i3", "text": "Recruitment, a job application, or a message meant for someone else."},
-      {"id": "i4", "text": "Gibberish or an automated notice with no question for support."},
-      {"id": "i5", "text": "Marketing, crypto, selling followers, or a prize promotion."},
-      {"id": "i6", "text": "The sender does not describe a problem with their own order, account, or device."},
-      {"id": "i7", "text": "Cold outreach. Nobody is asking us to fix, explain, or replace something."},
-      {"id": "i8", "text": "Phishing that asks for a password, a payment, or card details."},
-      {"id": "i9", "text": "Not a customer support request."}
+      {
+        "id": "i0",
+        "text": "The message is spam or completely irrelevant: a prize, a dentist reminder, an out-of-office reply, or anything that is not this customer's order, account, or device. There is nothing for support to answer.",
+        "backup": "The message is spam or completely irrelevant."
+      },
+      {
+        "id": "i1",
+        "text": "Spam, phishing, or a scam, including a fake delivery or account alert, a customs fee, a premium-rate voicemail, or a link that demands a password or a card. Not a ticket.",
+        "backup": "Spam, phishing, or a scam, including a fake delivery or account alert."
+      },
+      {
+        "id": "i2",
+        "text": "An unsolicited sales pitch, supplier offer, or partnership request: SEO packages, a factory quote, bulk used stock, a guest post, or a meeting about cross-promotion. They are not a customer.",
+        "backup": "An unsolicited sales pitch, supplier offer, or partnership request."
+      },
+      {
+        "id": "i3",
+        "text": "Recruitment, a job application, or a message meant for someone else, such as a resume for a software role or an appointment reminder that is not about an order. Support is the wrong desk. Leave it.",
+        "backup": "Recruitment, a job application, or a message meant for someone else."
+      },
+      {
+        "id": "i4",
+        "text": "Gibberish or an automated notice with no question for support: random characters, an out-of-office auto-reply, or a system notice that asks us for nothing. There is no request to act on.",
+        "backup": "Gibberish or an automated notice with no question for support."
+      },
+      {
+        "id": "i5",
+        "text": "Marketing, crypto, selling followers, or a prize promotion: a meme coin, bought Instagram followers, a gift card, or a free phone that asks for card details. It is not about an order or a device.",
+        "backup": "Marketing, crypto, selling followers, or a prize promotion."
+      },
+      {
+        "id": "i6",
+        "text": "The sender does not describe a problem with their own order, account, or device. They are selling, recruiting, pitching, or forwarding a notice that is not a support request. Ignore it rather than answer it.",
+        "backup": "The sender does not describe a problem with their own order, account, or device."
+      },
+      {
+        "id": "i7",
+        "text": "Cold outreach. Nobody is asking us to fix, explain, or replace something. The sender wants a sale, a supplier deal, a guest post, or a partnership call. It is not a ticket. Do not reply.",
+        "backup": "Cold outreach. Nobody is asking us to fix, explain, or replace something."
+      },
+      {
+        "id": "i8",
+        "text": "Phishing that asks for a password, a payment, or card details, often with a fake login link, a customs release fee, or a prize that requires a card to claim. It is not a real account problem.",
+        "backup": "Phishing that asks for a password, a payment, or card details."
+      },
+      {
+        "id": "i9",
+        "text": "Not a customer support request. No question about their own speaker, order, account, or a published policy. Spam, sales, recruitment, nonsense, or someone else's notice. Leave it unanswered. Do not reply.",
+        "backup": "Not a customer support request."
+      }
     ]
   }
 }
